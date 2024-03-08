@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -ex
+
+mkdir -p dist/
+npm run compile
+
+if [ "$TRAVIS_TAG" != "" ]; then
+  mkdir -p dist/css/$TRAVIS_TAG
+  cp dist/css/nocc-bootstrap-theme.css dist/css/$TRAVIS_TAG/nocc-bootstrap-theme.css
+
+  zip -r nocc-bootstrap-theme-$TRAVIS_TAG.zip src/ dist/ package.json README.md LICENSE
+fi

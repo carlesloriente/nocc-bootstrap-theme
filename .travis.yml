@@ -1,0 +1,18 @@
+language: node_js
+cache: yarn
+node_js:
+- '11'
+script:
+- yarn test
+- yarn dist
+git:
+  submodules: false
+deploy:
+- provider: npm
+  skip_cleanup: true
+  email: fi1nziulf@mozmail.com
+  api_key:
+    secure: TODO
+  on:
+    tags: true
+    repo: carlesloriente/nocc-bootstrap-theme

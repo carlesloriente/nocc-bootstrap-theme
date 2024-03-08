@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -ex
+
+cd bootstrap
+
+# echo "" > site/_includes/ads.html
+
+npm install
+
+# bundle install
+
+npm run docs-compile
+
+cp -R _site/* ../documentation
+
+cd ..

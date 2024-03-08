@@ -1,0 +1,91 @@
+.tags-heading, .tags-heading a {
+  color:  white;
+}
+
+.tag-list {
+  list-style: none;
+  margin-bottom: 15px
+}
+
+.tag-list li {
+  float: left;
+  width: 220px
+}
+
+div.jqcloud {
+  font-family: $headings-font-family;
+  margin-top: -60px;
+  margin-bottom: -60px;
+  margin-left: auto;
+  margin-right: auto
+}
+
+div.jqcloud span.w10 {
+  color: #800026;
+  font-size: 170%;
+  font-weight: 900;
+}
+
+div.jqcloud span.w9 {
+  color: #bd0026;
+  font-size: 160%;
+  font-weight: 900;
+}
+
+div.jqcloud span.w8 {
+  color: #e31a1c;
+  font-size: 150%;
+  font-weight: 700;
+}
+
+div.jqcloud span.w7 {
+  color: #fc4e2a;
+  font-size: 140%;
+  font-weight: 700;
+}
+
+div.jqcloud span.w6 {
+  color: #fd8d3c;
+  font-size: 130%;
+  font-weight: 500;
+}
+
+div.jqcloud span.w5 {
+  color: #feb24c;
+  font-size: 120%;
+  font-weight: 500;
+}
+
+div.jqcloud span.w4 {
+  color: #fed976;
+  font-size: 110%;
+  font-weight: 300;
+}
+
+div.jqcloud span.w3 {
+  color: #ffeda0;
+  font-size: 100%;
+  font-weight: 300;
+}
+
+div.jqcloud span.w2 {
+  color: #ffffcc;
+  font-size: 90%;
+  font-weight: 300;
+}
+
+div.jqcloud span.w1 {
+  color: #e1e1e1;
+  font-size: 80%;
+  font-weight: 300;
+}
+
+div.jqcloud a {
+  font-family: $headings-font-family;
+  color: inherit;
+  text-decoration: none;
+  &:focus,
+  &:hover {
+    text-decoration: dashed;
+  }
+}

@@ -1,0 +1,161 @@
+// Styling for the masthead
+header.masthead {
+  // TIP: Background images are set within the HTML using inline CSS!
+  background: no-repeat center;
+  background-color: transparent;
+  background-attachment: scroll;
+  position: relative;
+  background-size: cover;
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--overlay-bg);
+    opacity: 0.5;
+    z-index: -20;
+  }
+
+  .page-heading,
+  .post-heading,
+  .site-heading {
+    font-family: $headings-font-family !important;
+    padding: 200px 0 150px !important;
+    color: $white;
+    text-align: center;
+    text-transform: lowercase;
+    @media only screen and (min-width: 768px) {
+      padding: 200px 0;
+      color: $white;
+    }
+  }
+
+  .page-heading,
+  .site-heading {
+    h1 {
+      font-size: 50px;
+      font-weight: 900;
+      margin-top: 0;
+      color: $white;
+    }
+    .subheading {
+      font-size: 24px;
+      font-weight: 300;
+      color: $white;
+      line-height: 1.1;
+      display: block;
+      margin: 10px 0 0;
+      font-family: $headings-font-family;
+    }
+    .subheading:first-letter {
+      text-transform: uppercase;
+    }
+    @media only screen and (min-width: 768px) {
+      h1 {
+        font-size: 80px;
+      }
+    }
+  }
+  
+  .page-heading:first-letter,
+  .post-heading:first-letter,
+  .site-heading:first-letter {
+    text-transform: uppercase;
+  }
+
+  .post-heading {
+    h1 {
+      font-size: 35px;
+      text-transform: lowercase;
+    }
+    a {
+      color: $white !important;
+    }
+    .meta,
+    .subheading {
+      font-family: $headings-font-family;
+      line-height: 1.1;
+      display: block;
+    }
+    .subheading {
+      font-size: 24px;
+      font-weight: 700;
+      margin: 10px 0 30px;
+    }
+    .meta {
+      font-size: 20px;
+      font-weight: 300;
+      font-style: italic;
+      font-family: $headings-font-family;
+      a {
+        color: $white !important;
+      }
+    }
+
+    @media only screen and (min-width: 768px) {
+      h1 {
+        font-size: 55px;
+      }
+      .subheading {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+header.sechead {
+  margin-bottom: 50px;
+}
+
+header.smallhead {
+  height: 65px;
+  background-color: var(--small-head-color);
+}
+
+header.homehead {
+  color: $white !important;
+  text-align: center !important;
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--overlay-bg);
+    opacity: .6;
+    z-index: 900;
+  }
+  .page-heading {
+    font-family: $headings-font-family !important;
+    color: $white;
+    text-align: center;
+    position: absolute;
+    margin: auto;
+    z-index: 901;
+    width: 100%;
+    padding: 17rem 0;
+    h1 {
+      font-size: 50px;
+      font-weight: 900;
+      margin-top: 0;
+      text-transform: uppercase;
+    }
+    .subheading {
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 1.1;
+      display: block;
+      margin: 10px 0 0;
+    }
+    @media only screen and (min-width: 768px) {
+      padding: 14rem 0;
+      h1 {
+        font-size: 80px;
+      }
+      .subheading {
+        font-size: 32px;
+     }
+    }
+  }
+}

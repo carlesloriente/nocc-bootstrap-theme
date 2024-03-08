@@ -1,0 +1,243 @@
+// Bootstrap overrides for this template
+.btn {
+  display: inline-block;
+  font-family: $btn-font-family;
+  font-weight: 900;
+  text-align: center;
+  white-space: $btn-white-space;
+  vertical-align: middle;
+  user-select: none;
+  font-size: $btn-font-size;
+  padding: 15px 25px;
+  margin-right: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: transparent;
+  text-decoration: $link-decoration;
+  border: $btn-border-width solid transparent;
+  text-decoration: if($link-decoration == none, null, none);
+
+  &:hover {
+    color: var(--body-color);
+    text-decoration: $link-decoration;
+  }
+
+  .btn-check:focus + &,
+  &:focus {
+    box-shadow: $btn-focus-box-shadow;
+  }
+
+  .btn-check:checked + &,
+  .btn-check:active + &,
+  &:active,
+  &.active,
+  &.show {
+    @include box-shadow($btn-active-box-shadow);
+
+    &:focus {
+      @include box-shadow($input-btn-focus-box-shadow, $btn-active-box-shadow);
+    }
+  }
+
+  &:disabled,
+  &.disabled,
+  fieldset:disabled & {
+    opacity: $btn-disabled-opacity;
+    @include box-shadow(none);
+  }
+}
+
+// Future-proof disabling of clicks on `<a>` elements
+a.btn.disabled,
+fieldset:disabled a.btn {
+  pointer-events: none;
+}
+
+.btn-primary {
+  color: $white !important;
+  font-size: $btn-font-size;
+  background-color: var(--primary-color);
+  border-color: $cyan;
+  border-radius: $border-radius-lg * 3;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white !important;
+    background-color: darken($primary, 7.5) !important;
+    border-color: darken($cyan, 7.5) !important;
+    box-shadow: $btn-shadow;
+  }
+}
+
+.btn-secondary {
+  color: $white !important;
+  background-color: var(--secondary-color);
+  border-color: var(--info);
+  border-radius: $border-radius-lg * 2;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white !important;
+    background-color: darken($secondary, 7.5) !important;
+    border-color: darken($gray-600, 7.5) !important;
+    box-shadow: $btn-shadow;
+  }
+}
+
+.btn-download {
+  color: $white !important;
+  border-radius: $border-radius-lg * 2;
+  background-color: $bronze;
+  border: $btn-border-width solid $orange;
+  &:hover,
+  &:focus,
+  &:active {
+    color: $white !important;
+    background-color: darken($bronze, 7.5) !important;
+    border-color: darken($orange, 7.5) !important;
+    box-shadow: $btn-shadow;
+  }
+}
+
+.btn-toggle {
+  background-color: $black;
+  border-color: $gray-600;
+  border-radius: 20%;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: darken($bronze, 7.5) !important;
+    border-color: darken($orange, 7.5) !important;
+  }
+}
+
+.daylight {
+  background-image: url("/assets/vendor/nocc-bootstrap-theme-jekyll/icons/1.11.0/sun.svg");
+  background-repeat: no-repeat;
+  background-size: 24px auto;
+  width: 24px;
+  height: 24px;
+}
+
+.nightlight {
+  background-image: url("/assets/vendor/nocc-bootstrap-theme-jekyll/icons/1.11.0/moon.svg");
+  background-repeat: no-repeat;
+  background-size: 24px auto;
+  width: 24px;
+  height: 24px;
+}
+
+
+//
+// Alternate buttons
+
+@each $color,
+$value in $theme-colors {
+  .btn-#{$color} {
+    @if $color =="light" {
+      /*
+      @include button-variant($value,
+        $value,
+        //$hover-background: shade-color($value, $btn-hover-bg-shade-amount),
+        //$hover-border: shade-color($value, $btn-hover-border-shade-amount),
+        //$active-background: shade-color($value, $btn-active-bg-shade-amount),
+        //$active-border: shade-color($value, $btn-active-border-shade-amount)
+        $hover-background: tint-color($value, $btn-hover-bg-tint-amount),
+        $hover-border: tint-color($value, $btn-hover-border-tint-amount),
+        $active-background: tint-color($value, $btn-active-bg-tint-amount),
+        $active-border: tint-color($value, $btn-active-border-tint-amount));*/
+    }
+
+    @else if $color =="dark" {
+      /*
+      @include button-variant($value,
+        $value,
+        $hover-background: tint-color($value, $btn-hover-bg-tint-amount),
+        $hover-border: tint-color($value, $btn-hover-border-tint-amount),
+        $active-background: tint-color($value, $btn-active-bg-tint-amount),
+        $active-border: tint-color($value, $btn-active-border-tint-amount));*/
+    }
+
+    @else {
+      @include button-variant($value, $value);
+    }
+  }
+}
+
+
+@each $color,
+$value in $theme-colors {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value);
+  }
+}
+
+
+//
+// Link buttons
+//
+
+// Make a button look and behave like a link
+.btn-link {
+  font-weight: $font-weight-normal;
+  color: var(--link-color-base);
+  text-decoration: $link-decoration;
+
+  @include hover() {
+    color: var(--link-hover-color);
+    text-decoration: var(--link-hover-decoration);
+  }
+
+  &:focus,
+  &.focus {
+    text-decoration: var(--link-hover-decoration);
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $btn-link-disabled-color;
+    pointer-events: none;
+  }
+
+  // No need for an active state here
+}
+
+
+//
+// Button Sizes
+
+.btn-lg {
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+}
+
+.btn-sm {
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+}
+
+//
+// Block button
+
+.btn-block {
+  display: block;
+  width: 100%;
+
+  // Vertically space out multiple block buttons
+  +.btn-block {
+    margin-top: $btn-block-spacing-y;
+  }
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}
+
+.fade {
+  transition: opacity 0.15s linear;
+}
