@@ -1,12 +1,69 @@
 #!/usr/bin/env bash
 set -ex
 
-mkdir -p dist/
-npm run compile
+TARGET_FILES=( "nocc-theme.css" "jq-bootstrap-validation.js" "theme-toggler.js" );
+INPUT_DIR="src";
+OUTPUT_DIR="dist";
+THEME="nocc-bootstrap-theme";
 
-if [ "$TRAVIS_TAG" != "" ]; then
-  mkdir -p dist/css/$TRAVIS_TAG
-  cp dist/css/nocc-bootstrap-theme.css dist/css/$TRAVIS_TAG/nocc-bootstrap-theme.css
 
-  zip -r nocc-bootstrap-theme-$TRAVIS_TAG.zip src/ dist/ package.json README.md LICENSE
-fi
+preflight() {
+
+  rm -rf dist && mkdir -p dist
+	if [ ! -d $INPUT_DIR ]; then
+    echo "Directory `src` not found";
+    exit 0;
+	fi
+
+}
+
+
+compiling() {
+
+  npm run compile
+
+}
+
+
+building() {
+
+	for file in "${TARGET_FILES[@]}"; do
+    name="${file%.*}"
+    ext="${file##*.}"
+    if [ $ext == "css" ]; then
+  		TYPE="text/css"
+    fi
+    if [ $ext == "js" ]; then
+  		TYPE="text/javascript"
+    fi
+    minimizing;
+	done
+  distribution;
+
+}
+
+
+minimizing() {
+
+  minify --type=${TYPE} < ${OUTPUT_DIR}/${THEME}/${ext}/${file} > ${OUTPUT_DIR}/${THEME}/${ext}/${name}.min.${ext}
+
+}
+
+
+distribution() {
+
+  echo ""
+
+#  if [ "$TRAVIS_TAG" != "" ]; then
+#    mkdir -p $OUTPUT_DIR/$THEME/css/$TRAVIS_TAG $OUTPUT_DIR/$THEME/js/$TRAVIS_TAG
+#    cp $OUTPUT_DIR/$THEME/css/nocc-theme.* $OUTPUT_DIR/$THEME/css/$TRAVIS_TAG/nocc-theme.*
+#    cp $OUTPUT_DIR/$THEME/js/nocc-theme.* $OUTPUT_DIR/$THEME/js/$TRAVIS_TAG/nocc-theme.*
+#    zip -r $THEME-$TRAVIS_TAG.zip $INPUT_DIR/src/ $OUTPUT_DIR/ package.json README.md LICENSE
+#  fi
+
+}
+
+preflight;
+compiling;
+building;
+#landing;

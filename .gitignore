@@ -54,7 +54,7 @@ dist/
 build/Release
 _site/*
 _site_dev/*
-documentation/*
+demo/*
 
 # Dependency directories
 jspm_packages/*

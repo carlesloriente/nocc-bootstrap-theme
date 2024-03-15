@@ -30,21 +30,21 @@ $dark-border-subtle-dark:            $gray-800;
 $body-color-dark:                    $gray-300;
 $body-bg-dark:                       $gray-900;
 $body-primary-color-dark:            $primary;
-$body-secondary-color-dark:          $gray-400;
-$body-secondary-bg-dark:             $gray-800;
-$body-tertiary-color-dark:           $gray-500;
+$body-secondary-color-dark:          $gray-100;
+$body-secondary-bg-dark:             $gray-900;
+$body-tertiary-color-dark:           $gray-300;
 $body-tertiary-bg-dark:              mix($gray-800, $gray-900, 50%);
 $body-emphasis-color-dark:           $white;
 $border-color-dark:                  $gray-700;
 $box-shadow-dark:                    0 .5rem 1rem rgba($gray-400, .15);
 $headings-color-dark:                inherit;
-$small-head-color-dark:             black;
+$small-head-color-dark:              $black;
 $link-color-dark:                    $cyan;
 $link-hover-color-dark:              $bronze;
 $overlay-bg-dark:                    $black;
 $code-color-dark:                    tint-color($code-color, 40%);
-$mark-color-dark:                    $body-color-dark;
-$mark-bg-dark:                       $yellow;
+$mark-color-dark:                    $white;
+$mark-bg-dark:                       $orange;
 
 $modal-body-color-dark:              $gray-900;
 $modal-header-color-dark:            $black;
@@ -54,17 +54,17 @@ $modal-header-color-dark:            $black;
 
 $carousel-dark-indicator-active-bg:  $black;
 $carousel-dark-caption-color:        $black;
-$carousel-dark-control-icon-filter:  invert(1) grayscale(100);
+$carousel-dark-control-icon-filter:  invert(0) grayscale(100);
 
 //
 // Forms
 
 $form-control-color-dark:            $white;
 $form-select-indicator-color-dark:   $body-color-dark;
-$form-select-indicator-dark:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-indicator-color-dark}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/></svg>");
+$form-select-indicator-dark:         url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="none" stroke="#{$form-select-indicator-color-dark}" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m2 5 6 6 6-6"/></svg>');
 
 $form-switch-color-dark:             rgba($white, .25);
-$form-switch-bg-image-dark:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='3' fill='#{$form-switch-color-dark}'/></svg>");
+$form-switch-bg-image-dark:          url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 -4 8 8"><circle r="3" fill="#{$form-switch-color-dark}"/></svg>');
 
 $form-valid-color-dark:              $green;
 $form-valid-border-color-dark:       $green;
