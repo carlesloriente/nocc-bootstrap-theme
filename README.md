@@ -37,7 +37,7 @@ New contributors are always welcome! Check out [CONTRIBUTING.md](https://github.
 
 ### Setup
 
-- Install node v8.9 or higher
+- Install node v10.12 or higher
 - Clone project `git clone --recursive git@github.com:carlesloriente/nocc-bootstrap-theme.git`
 - Go into the project folder `cd nocc-bootstrap-theme`
 - Init the Bootstrap submodule `git submodule update --init --recursive` (only needed the very first time)
@@ -47,25 +47,37 @@ The build structure looks like this:
 
 ```filesystem
 dist/
- ├─ css/
- │  └─ nocc-theme.css
- │  └─ nocc-theme.min.css
- ├─ fonts/
- ├─ icons/
- ├─ images/
- ├─ js/
+ ├─ nocc-bootstrap-theme
+ │  └─ fonts/
+ │  └─ icons/
+ │  └─ images/
+ │  └─ js/
+ │  └─ css/
+ │     └─ nocc-theme.css
+ │     └─ nocc-theme.min.css
+ ├─ src
 ```
 
 - The `nocc-bootstrap-theme/css/nocc-theme.css` (or de minified version `nocc-theme.min.css`) file loads the font files, icon files, JavaScript files and image files.
 
 If you want to see the theme in action, run the command:
 
+> [!IMPORTANT]
+> Before running the command, it's required to have the distribution created, using `npm run dist` command.
+
 ```bash
   npm run build-demo
 ```
 
 Now you should see a fragment of the website [NOCC Theme website](https://bootstrap-theme.notesoncloudcomputing.com) pages with NOCC styling applied.
-`npm run server-watch` incorporates a watcher, so you can write code and see your changes immediately in the browser.
+
+To run the bundled webserver, run the command:
+
+```bash
+  npm run server-watch
+```
+
+The command incorporates a watcher, so you can write code and see your changes immediately in the browser.
 
 ## Copyright and License
 
