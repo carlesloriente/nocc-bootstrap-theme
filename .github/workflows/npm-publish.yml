@@ -12,11 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/checkout@v3
         with:
-          repository: twbs/bootstrap
+          repository: https://github.com/twbs/bootstrap
           path: bootstrap
           token: ${{ secrets.PAT_TOKEN }}
+      - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 20
