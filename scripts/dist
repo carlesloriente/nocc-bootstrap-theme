@@ -50,20 +50,6 @@ minimizing() {
 }
 
 
-distribution() {
-
-  echo ""
-
-#  if [ "$TRAVIS_TAG" != "" ]; then
-#    mkdir -p $OUTPUT_DIR/$THEME/css/$TRAVIS_TAG $OUTPUT_DIR/$THEME/js/$TRAVIS_TAG
-#    cp $OUTPUT_DIR/$THEME/css/nocc-theme.* $OUTPUT_DIR/$THEME/css/$TRAVIS_TAG/nocc-theme.*
-#    cp $OUTPUT_DIR/$THEME/js/nocc-theme.* $OUTPUT_DIR/$THEME/js/$TRAVIS_TAG/nocc-theme.*
-#    zip -r $THEME-$TRAVIS_TAG.zip $INPUT_DIR/src/ $OUTPUT_DIR/ package.json README.md LICENSE
-#  fi
-
-}
-
 preflight;
 compiling;
 building;
-#landing;
