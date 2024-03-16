@@ -7,10 +7,8 @@ yarn.lock
 .editorconfig
 .gitmodules
 .sass-lint.yml
-documentation/
 node_modules/
 .git/
 .sass-cache/
 build.sh
 icons/
-src/
