@@ -1,8 +1,7 @@
 {
   "name": "nocc-bootstrap-theme",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "NOCC A responsive Bootstrap 5 theme",
-  "main": "dist/index.js",
   "scripts": {
     "dist": "./scripts/dist",
     "start": "npm-run-all --parallel server-watch compile-watch",
