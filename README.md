@@ -12,7 +12,7 @@
 
 ## Installing
 
-This theme is a complete replacement for Bootstrap 5.3.3. You only need to include `nocc-theme.min.css`.
+This theme is a complete replacement for Bootstrap 5.3.3. You only need to include `nocc-theme.css`.
 
 ```bash
   npm install nocc-bootstrap-theme --save
@@ -46,16 +46,16 @@ New contributors are always welcome! Check out [CONTRIBUTING.md](https://github.
 The build structure looks like this:
 
 ```filesystem
-dist/
- ├─ nocc-bootstrap-theme
- │  └─ fonts/
- │  └─ icons/
- │  └─ images/
- │  └─ js/
- │  └─ css/
- │     └─ nocc-theme.css
- │     └─ nocc-theme.min.css
- ├─ src
+nocc-bootstrap-theme/
+└─ fonts/
+└─ icons/
+└─ images/
+└─ js/
+└─ css/
+|  └─ nocc-theme.css
+├─ scripts/
+├─ src/
+├─ static/
 ```
 
 - The `nocc-bootstrap-theme/css/nocc-theme.css` (or de minified version `nocc-theme.min.css`) file loads the font files, icon files, JavaScript files and image files.

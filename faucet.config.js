@@ -17,8 +17,20 @@ module.exports = {
       target: './dist/nocc-bootstrap-theme/js'
     },
     {
+      source: './scripts/',
+      target: './dist/scripts'
+    },
+    {
       source: './src/',
       target: './dist/src'
+    },
+    {
+      source: './static/',
+      target: './dist/static'
+    },
+    {
+      source: './package.json',
+      target: './dist/package.json'
     },
     {
       source: './AUTHORS.md',
