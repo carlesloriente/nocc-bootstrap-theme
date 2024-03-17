@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-set -ex
-
-sudo dnf install -y ruby ruby-devel libffi-devel make gcc redhat-rpm-config
-gem update --system
-gem install travis
