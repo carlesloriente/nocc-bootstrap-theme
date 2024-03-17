@@ -3,7 +3,6 @@
 .git/
 .github
 .sass-cache/
-.sass-lint.yml
 AUTHORS.md
 CODE_OF_CONDUCT.md
 CONTRIBUTING.md
