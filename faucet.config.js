@@ -29,6 +29,18 @@ module.exports = {
       target: './dist/static'
     },
     {
+      source: './faucet.config.js',
+      target: './dist/faucet.config.js'
+    },
+    {
+      source: './faucet.config.dev.js',
+      target: './dist/faucet.config.dev.js'
+    },
+    {
+      source: './.sass-lint.yml',
+      target: './dist/sass-lint.yml'
+    },
+    {
       source: './package.json',
       target: './dist/package.json'
     },
