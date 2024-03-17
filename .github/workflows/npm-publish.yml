@@ -20,7 +20,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org/'
       - run: npm ci
       - name: Publish the release to NPM
-        run: npm publish --provenance --access public
+        run: npm publish
         #working-directory: ./dist
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPMPUBTOKEN}}
