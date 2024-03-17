@@ -19,9 +19,9 @@ jobs:
           node-version: '20.x'
           registry-url: 'https://registry.npmjs.org/'
       - run: npm ci
-        working-directory: dist/
+        working-directory: ../dist/
       - name: Publish the release to NPM
         run: npm publish
-        working-directory: dist/
+        working-directory: ../dist/
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPMPUBTOKEN}}
