@@ -21,6 +21,6 @@ jobs:
       - run: npm ci
       - name: Publish the release to NPM
         run: npm publish --provenance --access public
-        working-directory: ./dist
+        #working-directory: ./dist
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPMPUBTOKEN}}
