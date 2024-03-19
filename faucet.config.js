@@ -1,44 +1,36 @@
 module.exports = {
   static: [
     {
+      source: './bootstrap',
+      target: './dist/bootstrap'
+    },
+    {
       source: './src/fonts',
-      target: './dist/nocc-bootstrap-theme/fonts'
+      target: './dist/fonts'
     },
     {
       source: './src/icons',
-      target: './dist/nocc-bootstrap-theme/icons'
+      target: './dist/icons'
     },
     {
       source: './src/images',
-      target: './dist/nocc-bootstrap-theme/images'
+      target: './dist/images'
     },
     {
       source: './src/js',
-      target: './dist/nocc-bootstrap-theme/js'
+      target: './dist/js'
     },
     {
-      source: './scripts/',
-      target: './dist/scripts'
-    },
-    {
-      source: './src/',
+      source: './src',
       target: './dist/src'
     },
     {
-      source: './static/',
-      target: './dist/static'
+      source: './.npmignore',
+      target: './dist/.npmignore'
     },
     {
       source: './faucet.config.js',
       target: './dist/faucet.config.js'
-    },
-    {
-      source: './faucet.config.dev.js',
-      target: './dist/faucet.config.dev.js'
-    },
-    {
-      source: './.sass-lint.yml',
-      target: './dist/sass-lint.yml'
     },
     {
       source: './package.json',
@@ -68,7 +60,7 @@ module.exports = {
   sass: [
     {
       source: './src/styles/main.scss',
-      target: './dist/nocc-bootstrap-theme/css/nocc-theme.css'
+      target: './dist/css/nocc-theme.css'
     }
   ],
   manifest: {

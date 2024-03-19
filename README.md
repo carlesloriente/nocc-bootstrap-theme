@@ -1,13 +1,15 @@
 # NOCC A Bootstrap 5 Theme
 
-[![npm version](https://badge.fury.io/js/nocc-bootstrap-theme.svg)](https://www.npmjs.com/package/nocc-bootstrap-theme)
+[![NOCC Logo](src/images/nocc/nocc_package_logo.png)]
+
+[![npm version](https://badge.fury.io/js/nocc-bootstrap-theme.svg)](https://badge.fury.io/js/nocc-bootstrap-theme)
 
 ## Dependencies which are bundled with the theme
 
 - [Bootstrap 5.3.3](https://getbootstrap.com)
 - [jQuery 3.7.1](https://jquery.com)
 - [jCloud 2.0.3](https://github.com/mistic100/jQCloud)
-- Roboto Sans-serif, Lora Serif, and Oxygen font families
+- [Roboto Sans-serif](https://fonts.google.com/specimen/Roboto), [Lora Serif](https://fonts.google.com/specimen/Lora), and [Oxygen Mono](https://fonts.google.com/specimen/Oxygen+Mono) font families
 - [A few Bootstrap 5 icons](https://icons.getbootstrap.com)
 
 ## Installing
@@ -15,7 +17,7 @@
 This theme is a complete replacement for Bootstrap 5.3.3. You only need to include `nocc-theme.css`.
 
 ```bash
-  npm install nocc-bootstrap-theme --save
+  npm install nocc-bootstrap-theme@1.0.3 --save
 ```
 
 ## Usage
@@ -23,7 +25,7 @@ This theme is a complete replacement for Bootstrap 5.3.3. You only need to inclu
 If you like to use this theme in your own Sass code and installed this theme with NPM you can import the source files to your manifest (e.g. `index.scss`) as well.
 
 ```scss
-  @import "nocc-bootstrap-theme/src/styles/main.scss";
+  @import "node_modules/nocc-bootstrap-theme/src/styles/main.scss";
 ```
 
 If you need documentation or help with Bootstrap or its components in general,
@@ -37,7 +39,7 @@ New contributors are always welcome! Check out [CONTRIBUTING.md](https://github.
 
 ### Setup
 
-- Install node v10.12 or higher
+- Install node v20.11.1 or higher
 - Clone project `git clone --recursive git@github.com:carlesloriente/nocc-bootstrap-theme.git`
 - Go into the project folder `cd nocc-bootstrap-theme`
 - Init the Bootstrap submodule `git submodule update --init --recursive` (only needed the very first time)

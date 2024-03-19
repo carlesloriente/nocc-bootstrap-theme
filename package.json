@@ -50,10 +50,9 @@
     "sass-lint": "^1.13.1"
   },
   "dependencies": {
-    "bootstrap": "^5.3.3",
-    "n": "^9.2.1"
+    "bootstrap": "^5.3.3"
   },
   "engines": {
-    "node": ">=10.12.0"
+    "node": ">=20.10.0"
   }
 }
