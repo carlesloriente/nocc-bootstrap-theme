@@ -12,17 +12,39 @@
 - [Roboto Sans-serif](https://fonts.google.com/specimen/Roboto), [Lora Serif](https://fonts.google.com/specimen/Lora), and [Oxygen Mono](https://fonts.google.com/specimen/Oxygen+Mono) font families
 - [A few Bootstrap 5 icons](https://icons.getbootstrap.com)
 
+## Demo website
+
+[NOCC Bootstrap theme](https://bootstrap-theme.notesoncloudcomputing.com/). A responsive blog theme for [Bootstrap 5](https://getbootstrap.com/){:target="_blank"} created by [Carles Loriente](http://github.com/carlesloriente). Featuring a homepage, about page, tags cloud page, gallery of images page, examples post pages, post comments powered by [Disqus](https://disqus.com/){:target="_blank"}, and contact page form powered by [Formspree](https://formspree.io/){:target="_blank"}.
+
+### Features
+
+1. **Static site for host in github-pages**
+2. **Use of Bootstrap 5 library**
+3. **Critical Path CSS integrated**
+4. **Self-hosted google webfonts**
+5. **Local environment built-in**
+6. **Extensive use of SVG and WebP**
+
 ## Installing
 
-This theme is a complete replacement for Bootstrap 5.3.3. You only need to include `nocc-theme.css`.
+This theme is a complete replacement for Bootstrap 5.3.3. You only need to include `nocc-theme.css` (or de minified version `nocc-theme.min.css`).
 
 ```bash
   npm install nocc-bootstrap-theme@1.0.3 --save
 ```
 
-## Usage
+- The `css/nocc-theme.css` (or de minified version `nocc-theme.min.css`) file loads the font files, icon files, JavaScript files and image files.
 
-If you like to use this theme in your own Sass code and installed this theme with NPM you can import the source files to your manifest (e.g. `index.scss`) as well.
+## Customize it
+
+You can change or use this theme in your own Sass code, please download de source repository and change it.
+
+### Setup
+
+- Clone the project `git clone --recursive git@github.com:carlesloriente/nocc-bootstrap-theme.git`
+- Init the Bootstrap submodule `git submodule update --init --recursive` (only needed the very first time)
+
+Then, you can import the source files to your manifest (e.g. index.scss) as well.
 
 ```scss
   @import "node_modules/nocc-bootstrap-theme/src/styles/main.scss";
@@ -31,13 +53,11 @@ If you like to use this theme in your own Sass code and installed this theme wit
 If you need documentation or help with Bootstrap or its components in general,
 please head over to [Bootstrap documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/).
 
-## Development
-
-### Comtributing
+## Comtributing
 
 New contributors are always welcome! Check out [CONTRIBUTING.md](https://github.com/carlesloriente/nocc-bootstrap-theme/blob/master/CONTRIBUTING.md) to get involved.
 
-### Setup
+### Install source files
 
 - Install node v20.11.1 or higher
 - Clone project `git clone --recursive git@github.com:carlesloriente/nocc-bootstrap-theme.git`
@@ -59,8 +79,6 @@ nocc-bootstrap-theme/
 ├─ src/
 ├─ static/
 ```
-
-- The `nocc-bootstrap-theme/css/nocc-theme.css` (or de minified version `nocc-theme.min.css`) file loads the font files, icon files, JavaScript files and image files.
 
 If you want to see the theme in action, run the command:
 
