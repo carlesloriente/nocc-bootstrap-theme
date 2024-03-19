@@ -44,7 +44,7 @@ building() {
 
 minimizing() {
 
-  minify --type=${TYPE} < ${OUTPUT_DIR}/${THEME}/${ext}/${file} > ${OUTPUT_DIR}/${THEME}/${ext}/${name}.min.${ext}
+  minify --type=${TYPE} < ${OUTPUT_DIR}/${ext}/${file} > ${OUTPUT_DIR}/${ext}/${name}.min.${ext}
 
 }
 

@@ -19,9 +19,8 @@ jobs:
           node-version: '20.x'
           registry-url: 'https://registry.npmjs.org/'
       - run: npm ci
-        working-directory: /home/runner/work/nocc-bootstrap-theme//dist/nocc-bootstrap-theme/
       - name: Publish the release to NPM
-        run: npm publish
-        working-directory: /home/runner/work/nocc-bootstrap-theme//dist/nocc-bootstrap-theme/
+        run: cd dist && npm publish
+        #run: cd dist && npm pack
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPMPUBTOKEN}}
