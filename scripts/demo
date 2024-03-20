@@ -24,6 +24,9 @@ building() {
   echo "Building demo";
   cp -R $INPUT_DIR/* $OUTPUT_DIR
   cp -R $DIST_DIR/* $OUTPUT_DIR
+  if [ -d $OUTPUT_DIR ]; then
+    rm -rf $OUTPUT_DIR/bootstrap
+  fi
 
 }
 
