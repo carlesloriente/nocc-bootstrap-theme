@@ -92,6 +92,22 @@ a {
   }
 }
 
+.btn-tertiary {
+  border-radius: $border-radius-lg * 2;
+  border-color: var(--#{$prefix}info);
+  background-color: $red;
+  color: $white;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: darken($gray-600, 7.5);
+    box-shadow: $btn-shadow;
+    background-color: darken($red, 7.5);
+    color: $white;
+  }
+}
+
 .btn-download {
   border: $btn-border-width solid $orange;
   border-radius: $border-radius-lg * 2;

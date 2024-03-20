@@ -247,8 +247,12 @@ small {
   width: 30%;
 }
 
-.text-bg-primary {
+.badge {
+  background: linear-gradient($nocc-badge-start, $nocc-badge-end);
+  text-transform: uppercase;
   color: $white;
+  font-family: $headings-font-family;
+  font-weight: 400;
 }
 
 //
