@@ -1,6 +1,6 @@
 # NOCC A Bootstrap 5 Theme
 
-[![NOCC Logo](src/images/nocc/nocc_package_logo.png)]
+![NOCC Logo](src/images/nocc/nocc_package_logo.png)
 
 [![npm version](https://badge.fury.io/js/nocc-bootstrap-theme.svg)](https://badge.fury.io/js/nocc-bootstrap-theme)
 
@@ -14,7 +14,7 @@
 
 ## Demo website
 
-[NOCC Bootstrap theme](https://bootstrap-theme.notesoncloudcomputing.com/). A responsive blog theme for [Bootstrap 5](https://getbootstrap.com/){:target="_blank"} created by [Carles Loriente](http://github.com/carlesloriente). Featuring a homepage, about page, tags cloud page, gallery of images page, examples post pages, post comments powered by [Disqus](https://disqus.com/){:target="_blank"}, and contact page form powered by [Formspree](https://formspree.io/){:target="_blank"}.
+[NOCC Bootstrap theme](https://bootstrap-theme.notesoncloudcomputing.com/). A responsive dual theme for [Bootstrap 5](https://getbootstrap.com/) created by [Carles Loriente](https://github.com/carlesloriente). Featuring a homepage, about page, tags cloud page, gallery of images page, examples post pages, post comments powered by [Disqus](https://disqus.com/), and contact page form powered by [Formspree](https://formspree.io/).
 
 ### Features
 
@@ -27,13 +27,13 @@
 
 ## Installing
 
-This theme is a complete replacement for Bootstrap 5.3.3. You only need to include `nocc-theme.css` (or de minified version `nocc-theme.min.css`).
+This theme is a complete replacement for Bootstrap 5.3.3. You only need to include `nocc-theme.css` or `nocc-theme.min.css`.
 
 ```bash
   npm install nocc-bootstrap-theme@1.0.4 --save
 ```
 
-- The `css/nocc-theme.css` (or de minified version `nocc-theme.min.css`) file loads the font files, icon files, JavaScript files and image files.
+- The `css/nocc-theme.css` (or the minified `nocc-theme.min.css`) file loads the font files, icon files, JavaScript files and image files.
 
 ## Customize it
 
@@ -47,11 +47,10 @@ You can change or use this theme in your own Sass code, please download de sourc
 Then, you can import the source files to your manifest (e.g. index.scss) as well.
 
 ```scss
-  @import "node_modules/nocc-bootstrap-theme/src/styles/main.scss";
+  @import "nocc-bootstrap-theme/src/styles/main.scss";
 ```
 
-If you need documentation or help with Bootstrap or its components in general,
-please head over to [Bootstrap documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/).
+If you need documentation or help with Bootstrap or its components in general, please head over to [Bootstrap documentation](https://getbootstrap.com/docs/5.3/getting-started/introduction/).
 
 ## Comtributing
 
@@ -59,7 +58,7 @@ New contributors are always welcome! Check out [CONTRIBUTING.md](https://github.
 
 ### Install source files
 
-- Install node v20.11.1 or higher
+- Install node v20.10.0 or higher
 - Clone project `git clone --recursive git@github.com:carlesloriente/nocc-bootstrap-theme.git`
 - Go into the project folder `cd nocc-bootstrap-theme`
 - Init the Bootstrap submodule `git submodule update --init --recursive` (only needed the very first time)
