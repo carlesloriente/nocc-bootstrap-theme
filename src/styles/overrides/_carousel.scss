@@ -9,6 +9,15 @@
     z-index: 999;
   }
 
+  .carousel-inner  {
+    img {
+      height: 35vh;
+      overflow: hidden;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
   :hover {
     .carousel-control-prev,
     .carousel-control-next {
@@ -20,15 +29,6 @@
       color: $carousel-control-color-hover;
     }
   }
-}
-
-.carousel-inner {
-  @include clearfix;
-  display: flex;
-  position: relative;
-  width: 100%;
-  height: 600px;
-  overflow: hidden;
 }
 
 .carousel-item {
@@ -158,7 +158,7 @@
   display: inline-block;
   background: 50% / 100% 100% no-repeat;
   width: $carousel-control-icon-width;
-  height: $carousel-control-icon-width;
+  height: $carousel-control-icon-height;
 }
 
 .carousel-control-prev-icon {
