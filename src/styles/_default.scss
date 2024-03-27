@@ -17,11 +17,6 @@ body {
   height: 100%;
 }
 
-.pb-5,
-.py-5 {
-  padding-bottom: 1rem;
-}
-
 .d-flex {
   display: flex;
 }
@@ -78,7 +73,7 @@ blockquote {
 
 .section-heading {
   margin-top: 60px;
-  font-size: 36px;
+  font-size: 2.2rem;
   font-weight: 700;
 }
 
@@ -90,8 +85,21 @@ blockquote {
   padding: 10px;
   text-align: center;
   color: var(--#{$prefix}secondary-color);
-  font-size: 14px;
+  font-size: .8rem;
   font-style: italic;
+}
+
+pre {
+  margin: 1rem 0 1.5rem;
+  border: 1px solid transparent;
+  border-radius: .6rem;
+  background-color: $black;
+  padding: 1.3rem 0;
+  font-size: $code-font-size;
+
+  code {
+    color: var(--#{$prefix}code-color);
+  }
 }
 
 .border {
@@ -185,6 +193,19 @@ small {
   .active {
     background: linear-gradient($nocc-item-active-start, $nocc-item-active-end);
   }
+}
+
+.fixed-bottom-footer {
+  position: fixed;
+  right: 0;
+  bottom: 320px;
+  left: 0;
+  z-index: 1030;
+}
+
+.post-content {
+  position: fixed;
+  z-index: 1050;
 }
 
 .align-baseline {
