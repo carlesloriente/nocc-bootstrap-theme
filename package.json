@@ -1,7 +1,7 @@
 {
   "name": "nocc-bootstrap-theme",
   "description": "NOCC A responsive Bootstrap 5 theme",
-  "version": "1.0.7",
+  "version": "1.0.6",
   "config": {
     "version_short": "1.0"
   },
