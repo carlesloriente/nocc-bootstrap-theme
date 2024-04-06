@@ -1,7 +1,5 @@
-name: npm-publish
-on:
-  release:
-    types: [created]
+name: npm-publish-test
+on: ["push", "pull_request"]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -27,7 +25,3 @@ jobs:
         id: dir
         env:
           GITHUB_TOKEN: ${{ secrets.NOCC_ACTIONS_TOKEN }}
-      - name: Publish npm package
-        run: npm publish 
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPMPUBTOKEN}}

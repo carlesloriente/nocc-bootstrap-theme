@@ -5,28 +5,8 @@ module.exports = {
       target: './dist/bootstrap'
     },
     {
-      source: './src/fonts',
-      target: './dist/fonts'
-    },
-    {
-      source: './src/icons',
-      target: './dist/icons'
-    },
-    {
-      source: './src/images',
-      target: './dist/images'
-    },
-    {
-      source: './src/js',
-      target: './dist/js'
-    },
-    {
       source: './src',
       target: './dist/src'
-    },
-    {
-      source: './.npmignore',
-      target: './dist/.npmignore'
     },
     {
       source: './faucet.config.js',
