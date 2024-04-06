@@ -1,12 +1,24 @@
 module.exports = {
   static: [
     {
-      source: './bootstrap',
-      target: './dist/bootstrap'
-    },
-    {
       source: './src',
       target: './dist/src'
+    },
+    {
+      source: './src/fonts',
+      target: './dist/fonts'
+    },
+    {
+      source: './src/icons',
+      target: './dist/icons'
+    },
+    {
+      source: './src/images',
+      target: './dist/images'
+    },
+    {
+      source: './src/js',
+      target: './dist/js'
     },
     {
       source: './faucet.config.js',
@@ -40,7 +52,7 @@ module.exports = {
   sass: [
     {
       source: './src/styles/main.scss',
-      target: './dist/src/css/nocc-theme.css'
+      target: './dist/css/nocc-theme.css'
     }
   ],
   manifest: {

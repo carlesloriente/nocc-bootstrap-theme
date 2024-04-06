@@ -26,14 +26,14 @@ jobs:
       - name: minisauras CSS
         uses: TeamTigers/minisauras@v2.0.0
         with:
-          directory: 'dist/src/css/'
+          directory: 'dist/css/'
         id: dir
         env:
           GITHUB_TOKEN: ${{ secrets.NOCC_ACTIONS_TOKEN }}
       - name: minisauras JS
         uses: TeamTigers/minisauras@v2.0.0
         with:
-          directory: 'dist/src/js/'
+          directory: 'dist/js/'
         env:
           GITHUB_TOKEN: ${{ secrets.NOCC_ACTIONS_TOKEN }}
       - run: du -a dist/

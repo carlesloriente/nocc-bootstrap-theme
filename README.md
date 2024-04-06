@@ -76,7 +76,6 @@ The package folder structure looks like this:
 
 ```filesystem
 nocc-bootstrap-theme/
-├─ bootstrap/
 ├─ css/
 ├─ fonts/
 ├─ icons/

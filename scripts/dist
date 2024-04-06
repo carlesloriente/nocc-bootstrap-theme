@@ -3,7 +3,7 @@ set -ex
 
 TARGET_FILES=( "nocc-theme.css" "jq-bootstrap-validation.js" "theme-toggler.js" );
 INPUT_DIR="src";
-OUTPUT_DIR="dist/src";
+OUTPUT_DIR="dist";
 THEME="nocc-bootstrap-theme";
 
 
