@@ -29,6 +29,5 @@ jobs:
         uses: TeamTigers/minisauras@v2.0.0
         with:
           directory: 'dist/js/'
-        id: dir
         env:
           GITHUB_TOKEN: ${{ secrets.NOCC_ACTIONS_TOKEN }}
