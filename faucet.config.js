@@ -21,10 +21,6 @@ module.exports = {
       target: './dist/js'
     },
     {
-      source: './faucet.config.js',
-      target: './dist/faucet.config.js'
-    },
-    {
       source: './package.json',
       target: './dist/package.json'
     },
