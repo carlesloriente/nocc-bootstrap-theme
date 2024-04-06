@@ -1,33 +1,46 @@
 name: npm-publish-test
 on: ["push", "pull_request"]
 jobs:
-  build:
+  warmup:
+    name: warmup
     runs-on: ubuntu-latest
     environment:
       name: build
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repo
+        uses: actions/checkout@v4
         with:
           submodules: true
-      - uses: actions/setup-node@v4
+      - name: Setup node
+        uses: actions/setup-node@v4
         with:
           node-version: '20.10'
           registry-url: 'https://registry.npmjs.org/'
-      - run: npm ci
+      -  run: npm ci
+  dist:
+    name: dist
+    needs: warmup
+    runs-on: ubuntu-latest
+    steps:
       - name: Build
         run: |
           npm run dist
           du -a dist/
+  minimizing:
+    name: minimizing
+    needs: dist
+    runs-on: ubuntu-latest
+    steps:
       - name: minisauras CSS
         uses: TeamTigers/minisauras@v2.0.0
         with:
-          directory: 'dist/css/'
+          directory: 'dist/src/css/'
         id: dir
         env:
           GITHUB_TOKEN: ${{ secrets.NOCC_ACTIONS_TOKEN }}
       - name: minisauras JS
         uses: TeamTigers/minisauras@v2.0.0
         with:
-          directory: 'dist/js/'
+          directory: 'dist/src/js/'
         env:
           GITHUB_TOKEN: ${{ secrets.NOCC_ACTIONS_TOKEN }}
