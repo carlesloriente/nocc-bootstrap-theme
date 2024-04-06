@@ -17,7 +17,7 @@ jobs:
       - name: Build
         run: |
           npm run dist
-          ls -lah dist/
+          du -a dist/
       - name: minisauras
         uses: TeamTigers/minisauras@v2.0.0
         with:
