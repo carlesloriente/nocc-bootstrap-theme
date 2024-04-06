@@ -22,8 +22,12 @@ jobs:
         run: |
           npm run dist
           du -a dist/
-      - name: HTML/CSS/JS Minifier
+      - name: CSS Minifier
         uses: devatherock/minify-js@v3.0.0
         with:
           directory: 'dist/css'
+      - name: JS Minifier
+        uses: devatherock/minify-js@v3.0.0
+        with:
+          directory: 'dist/js'  
       - run: du -a dist/
