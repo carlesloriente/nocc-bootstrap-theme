@@ -1,8 +1,8 @@
 module.exports = {
   static: [
     {
-      source: './bootstrap',
-      target: './dist/bootstrap'
+      source: './src',
+      target: './dist/src'
     },
     {
       source: './src/fonts',
@@ -19,18 +19,6 @@ module.exports = {
     {
       source: './src/js',
       target: './dist/js'
-    },
-    {
-      source: './src',
-      target: './dist/src'
-    },
-    {
-      source: './.npmignore',
-      target: './dist/.npmignore'
-    },
-    {
-      source: './faucet.config.js',
-      target: './dist/faucet.config.js'
     },
     {
       source: './package.json',

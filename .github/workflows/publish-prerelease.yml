@@ -1,0 +1,44 @@
+name: publish-prerelease
+on: 
+  push:
+    branches-ignore:
+      - main
+  pull_request:
+    branches-ignore:
+    - main
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    environment:
+      name: prerelease
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+      - name: Setup node, test and build
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.10'
+          registry-url: 'https://npm.pkg.github.com'
+      - run: |
+          npm ci
+          npm run dist
+      - name: CSS Minifier
+        uses: devatherock/minify-js@v3.0.0
+        with:
+          directory: 'dist/css'
+      - name: JS Minifier
+        uses: devatherock/minify-js@v3.0.0
+        with:
+          directory: 'dist/js'
+      - run: cd dist/ && npm version prerelease --preid=ci-$GITHUB_RUN_ID --no-git-tag-version && npm pack
+      - name: Upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: nocc-package-prerelease
+          path: "dist/*.tgz"

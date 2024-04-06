@@ -8,7 +8,7 @@ OUTPUT_DIR="demo"
 preflight() {
 
   if [ ! -d $DIST_DIR ]; then
-    echo "YOu need to execute the `${DIST_DIR}` command prior to create the demo files"
+    echo "You need to execute the `${DIST_DIR}` command prior to create the demo files"
     exit 0
   fi
 
