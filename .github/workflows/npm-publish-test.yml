@@ -29,5 +29,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.NOCC_ACTIONS_TOKEN }}
         id: dir
         with:
-          directory: './'
+          directory: 'dist/'
       - run: du -a dist/
