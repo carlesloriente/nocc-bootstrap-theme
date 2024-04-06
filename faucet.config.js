@@ -40,7 +40,7 @@ module.exports = {
   sass: [
     {
       source: './src/styles/main.scss',
-      target: './dist/css/nocc-theme.css'
+      target: './dist/src/css/nocc-theme.css'
     }
   ],
   manifest: {
