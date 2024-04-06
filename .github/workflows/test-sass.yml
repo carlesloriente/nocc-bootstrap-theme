@@ -1,6 +1,11 @@
 name: test-sass
-on: ["push", "pull_request"]
-
+on: 
+  push:
+    branches-ignore:
+      - main
+  pull_request:
+    branches-ignore:
+    - main
 jobs:
   test:
     name: Test
