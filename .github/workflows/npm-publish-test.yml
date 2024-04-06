@@ -6,6 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: build
+    permissions:
+      contents: read
+      packages: write
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -15,9 +18,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20.10'
-          registry-url: 'https://registry.npmjs.org/'
+          registry-url: 'https://npm.pkg.github.com'
       - run: npm ci
-
       - name: Build
         run: |
           npm run dist
@@ -29,5 +31,12 @@ jobs:
       - name: JS Minifier
         uses: devatherock/minify-js@v3.0.0
         with:
-          directory: 'dist/js'  
-      - run: du -a dist/ && cd dist && npm pack
+          directory: 'dist/js'
+      - run: du -a dist/
+      - run: npm version prerelease --preid=ci-$GITHUB_RUN_ID --no-git-tag-version
+      - run: cd dist/ && npm pack
+      - name: Upload
+        uses: actions/upload-artifact@v2
+        with:
+            name: package
+            path: "*.tgz"
