@@ -45,3 +45,7 @@ jobs:
       - id: set-version
         name: Output version change
         run: npm pkg get version
+      - name: Publish npm package
+        run: cd dist/ && npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPMPUBTOKEN}}
