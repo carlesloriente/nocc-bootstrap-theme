@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           submodules: true
       - name: Setup node, test and build
@@ -41,7 +43,7 @@ jobs:
         if: contains(github.event.pull_request.labels.*.name, 'patch')
         run: cd dist/ && npm version patch --git-tag-version
       - name: Git push version bump
-        run: git push origin main --follow-tags --force
+        run: git push origin main --follow-t
       - id: set-version
         name: Output version change
         run: npm pkg get version
