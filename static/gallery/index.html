@@ -7,10 +7,11 @@
     <meta name="description" content="A gallery of images used in the article header.">
     <meta name="twitter:card" content="summary">
     <link rel="shortcut icon" href="../images/favicon.ico">
-    <link rel="icon" href="../images/favicon.ico" sizes="any">
-    <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="../images/favicon.png" type="image/png">
-    <link href="../css/nocc-theme.css" rel="stylesheet">  
+    <link rel="icon" href="../images/favicon_io/favicon.ico" sizes="any">
+    <link rel="icon" href="../images/favicon_io/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../images/favicon_io/favicon.png" type="image/png">
+    <link rel="manifest" href="../images/favicon_io/site.webmanifest">
+    <link rel="stylesheet" href="../css/nocc-theme.css" type="text/css">  
   </head>
   <body class="d-flex flex-column h-100" style="overflow-x: hidden;">
     <header>
@@ -116,6 +117,7 @@
             var modal = document.getElementById('image-gallery-image');
             modal.removeAttribute('src');
             modal.setAttribute('src', url);
+            modal.setAttribute("disabled", "");
             var title = document.getElementById('image-gallery-title');
             title.textContent = name;
           };

@@ -16,7 +16,7 @@
 
 **Are you tired of outdated Bootstrap themes?**
 
-**Say hello to NOCC 🎉**: A Modern Bootstrap 5 Theme!.
+**Say hello to NOCC 🎉**: A Modern Bootstrap 5 Theme!
 
 It comes in two powerful options:
 
@@ -48,13 +48,13 @@ It comes in two powerful options:
 
 1. **Use of the latest Bootstrap 5 library**
 2. **Fully Responsive and Dual Color (light and dark)**
-3. **CSS and JS files minimized by default**
+3. **CSS and JS files are minimized by default**
 4. **Self-hosted Google web fonts**
 5. **Demo site built-in**
 
 ## What's included
 
-Within the download you'll find all the required directories and files, logically grouping common assets and providing both compiled and minified variations.
+You'll find all the required directories and files within the download, logically grouping common assets and providing compiled and minified variations.
 
 ### Bundled dependencies
 
@@ -86,7 +86,7 @@ nocc-bootstrap-theme/
 
 - The `css/nocc-theme.css` (or the minified `nocc-theme.min.css`) file loads the fonts and icons. Remember to include JavaScript files and images in your project.
 
-And, you can also import the source SCSS files to your manifest (e.g. index.scss).
+You can also import the source SCSS files to your manifest (e.g. index.scss).
 
 ```scss
   @import "nocc-bootstrap-theme/src/styles/main.scss";
@@ -96,7 +96,7 @@ If you need documentation or help with Bootstrap or its components in general, p
 
 ## Customize it
 
-You can change or use this theme in your own Sass code, please download the source code from the [GitHub repository](https://github.com/carlesloriente/nocc-bootstrap-theme) and change it.
+You can change or use this theme in your own Sass code; please download the source code from the [GitHub repository](https://github.com/carlesloriente/nocc-bootstrap-theme) and change it.
 
 ### Installing from source
 
@@ -136,14 +136,14 @@ Build the distribution, run the command:
 
 ### Demo website
 
-The source include resources for building and running locally a sample website.
+The source includes resources for building and running locally a sample website.
 
 If you want to see the theme in action, complete the following steps.
 
 Now, let's build the demo site, run the command:
 
 ```bash
-  npm run compile
+  npm run compile-demo
 ```
 
 The folder `demo` contains all the generated site files.
@@ -154,10 +154,10 @@ To run the bundled web server, run the command:
   npm run server-watch
 ```
 
-Additionally, there's an option that builds the files on the fly when there's a change and runs the web server incorporating a watcher, so you can write code and see your changes immediately in the browser, run the command:
+Additionally, an option builds the files on the fly when there's a change and runs the web server incorporating a watcher, so you can write code and see your changes immediately in the browser. Run the command:
 
 ```bash
-  npm run start
+  npm run start-demo
 ```
 
 ### Testing your changes
@@ -178,7 +178,7 @@ New contributors are always welcome! Check out [CONTRIBUTING.md](https://github.
 
 ## Creator
 
-**[Carles Loriente](https://www.linkedin.com/in/carles-loriente/)** creator and maintainer of the NOCC Bootstrap theme.
+**[Carles Loriente](https://www.linkedin.com/in/carles-loriente/)** is the creator and maintainer of the NOCC Bootstrap theme.
 
 - [Linkedin](https://www.linkedin.com/in/carles-loriente)
 - [Twitter](https://twitter.com/godarthvader)
