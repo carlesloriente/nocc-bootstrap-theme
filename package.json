@@ -38,7 +38,7 @@
   "scripts": {
     "dist": "./scripts/dist",
     "start-demo": "npm-run-all --parallel server-watch compile-demo",
-    "server-watch": "live-server ./demo",
+    "server-watch": "live-server ./demo --https=scripts/https" ,
     "compile": "faucet",
     "compile-demo": "faucet --watch --config=faucet.config.dev.js",
     "lint": "sass-lint -v -q"
