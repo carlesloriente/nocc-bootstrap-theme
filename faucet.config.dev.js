@@ -2,18 +2,18 @@ module.exports = {
   static: [
     {
       source: './src/fonts',
-      target: './demo/fonts'
+      target: './demo/assets/vendor/nocc-bootstrap-theme/fonts'
     },    {
       source: './src/icons',
-      target: './demo/icons'
+      target: './demo/assets/vendor/nocc-bootstrap-theme/icons'
     },
     {
       source: './src/images',
-      target: './demo/images'
+      target: './demo/assets/vendor/nocc-bootstrap-theme/images'
     },
     {
       source: './src/js',
-      target: './demo/js'
+      target: './demo/assets/vendor/nocc-bootstrap-theme/js'
     },
     {
       source: './static',
@@ -23,7 +23,7 @@ module.exports = {
   sass: [
     {
       source: './src/styles/main.scss',
-      target: './demo/css/nocc-theme.css'
+      target: './demo/assets/vendor/nocc-bootstrap-theme/css/nocc-theme.css'
     }
   ],
   manifest: {
