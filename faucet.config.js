@@ -1,8 +1,20 @@
 module.exports = {
   static: [
     {
-      source: './src',
-      target: './dist/src'
+      source: './src/fonts',
+      target: './dist/src/fonts'
+    },
+    {
+      source: './src/icons',
+      target: './dist/src/icons'
+    },
+    {
+      source: './src/js',
+      target: './dist/src/js'
+    },
+    {
+      source: './src/styles',
+      target: './dist/src/styles'
     },
     {
       source: './src/fonts',
