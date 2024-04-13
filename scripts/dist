@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 set -ex
 
-TARGET_FILES=( "nocc-theme.css" "jq-bootstrap-validation.js" "theme-toggler.js" );
 INPUT_DIR="src";
 OUTPUT_DIR="dist";
 THEME="nocc-bootstrap-theme";
@@ -25,30 +24,5 @@ compiling() {
 }
 
 
-building() {
-
-	for file in "${TARGET_FILES[@]}"; do
-    name="${file%.*}"
-    ext="${file##*.}"
-    if [ $ext == "css" ]; then
-  		TYPE="text/css"
-    fi
-    if [ $ext == "js" ]; then
-  		TYPE="text/javascript"
-    fi
-    #minimizing;
-	done
-
-}
-
-
-minimizing() {
-
-  minify --type=${TYPE} < ${OUTPUT_DIR}/${ext}/${file} > ${OUTPUT_DIR}/${ext}/${name}.min.${ext}
-
-}
-
-
 preflight;
 compiling;
-building;

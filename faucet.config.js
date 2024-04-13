@@ -1,72 +1,72 @@
+"use strict";
+
+var targetBaseDir = "./dist"
+
 module.exports = {
-  static: [
-    {
-      source: './src/fonts',
-      target: './dist/src/fonts'
-    },
-    {
-      source: './src/icons',
-      target: './dist/src/icons'
-    },
-    {
-      source: './src/js',
-      target: './dist/src/js'
-    },
-    {
-      source: './src/styles',
-      target: './dist/src/styles'
-    },
-    {
-      source: './src/fonts',
-      target: './dist/fonts'
-    },
-    {
-      source: './src/icons',
-      target: './dist/icons'
-    },
-    {
-      source: './src/images',
-      target: './dist/images'
-    },
-    {
-      source: './src/js',
-      target: './dist/js'
-    },
-    {
-      source: './package.json',
-      target: './dist/package.json'
-    },
-    {
-      source: './AUTHORS.md',
-      target: './dist/AUTHORS.md'
-    },
-    {
-      source: './CODE_OF_CONDUCT.md',
-      target: './dist/CODE_OF_CONDUCT.md'
-    },
-    {
-      source: './CONTRIBUTING.md',
-      target: './dist/CONTRIBUTING.md'
-    },
-    {
-      source: './LICENSE',
-      target: './dist/LICENSE'
-    },
-    {
-      source: './README.md',
-      target: './dist/README.md'
-    }
-  ],
-  sass: [
-    {
-      source: './src/styles/main.scss',
-      target: './dist/css/nocc-theme.css'
-    }
-  ],
+
   manifest: {
-    target: "./dist/manifest.json",
     key: "short",
-    baseURI: "../",
-    webRoot: "./dist"
+    webRoot: "./docs",
+    target: targetBaseDir + "/manifest.json"
   },
+
+  sass: [{
+    source: './src/styles/main.scss',
+    target: targetBaseDir + '/css/nocc-theme.css'
+  }],
+
+  js: [{
+    source: './src/js/jq-bootstrap-validation.js',
+    target: targetBaseDir + '/js/jq-bootstrap-validation.js',
+    compact: 'minify'
+  }, {
+    source: './src/js/theme-toggler.js',
+    target: targetBaseDir + '/js/theme-toggler.js',
+    compact: 'minify'
+  }],
+
+  static: [{
+    source: './src/fonts',
+    target: targetBaseDir + '/src/fonts'
+  }, {
+    source: './src/icons',
+    target: targetBaseDir + '/src/icons'
+  }, {
+    source: './src/js',
+    target: targetBaseDir + '/src/js'
+  }, {
+    source: './src/styles',
+    target: targetBaseDir + '/src/styles'
+  }, {
+    source: './src/fonts',
+    target: targetBaseDir + '/fonts'
+  }, {
+    source: './src/icons',
+    target: targetBaseDir + '/icons'
+  }, {
+    source: './src/images',
+    target: targetBaseDir + '/images'
+  }, {
+    source: './src/js',
+    target: targetBaseDir + '/js'
+  }, {
+    source: './package.json',
+    target: targetBaseDir + '/package.json'
+  }, {
+    source: './AUTHORS.md',
+    target: targetBaseDir + '/AUTHORS.md'
+  }, {
+    source: './CODE_OF_CONDUCT.md',
+    target: targetBaseDir + '/CODE_OF_CONDUCT.md'
+  }, {
+    source: './CONTRIBUTING.md',
+    target: targetBaseDir +'/CONTRIBUTING.md'
+  }, {
+    source: './LICENSE',
+    target: targetBaseDir +'/LICENSE'
+  }, {
+    source: './README.md',
+    target: targetBaseDir +'/README.md'
+  }],
+
 }

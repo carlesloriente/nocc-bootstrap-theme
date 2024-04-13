@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://bootstrap-theme.notesoncloudcomputing.com/">
-    <img src="src/images/nocc/nocc-theme-showroom.png" alt="NOCC logo" style="max-width: 100%;">
+    <img src="https://bootstrap-theme.notesoncloudcomputing.com/assets/vendor/nocc-bootstrap-theme/images/nocc/nocc-theme-showroom.png" alt="NOCC logo" style="max-width: 100%;">
   </a>
 </p>
 

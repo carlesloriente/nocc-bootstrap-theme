@@ -1,35 +1,34 @@
+"use strict";
+
+var targetBaseDir = "./demo/assets/vendor/nocc-bootstrap-theme"
+
 module.exports = {
-  static: [
-    {
-      source: './src/fonts',
-      target: './demo/assets/vendor/nocc-bootstrap-theme/fonts'
-    },    {
-      source: './src/icons',
-      target: './demo/assets/vendor/nocc-bootstrap-theme/icons'
-    },
-    {
-      source: './src/images',
-      target: './demo/assets/vendor/nocc-bootstrap-theme/images'
-    },
-    {
-      source: './src/js',
-      target: './demo/assets/vendor/nocc-bootstrap-theme/js'
-    },
-    {
+  watchDirs: ["./src/js", "./src/styles"],
+
+  manifest: {
+    key: "short",
+    webRoot: "./demo",
+    target: "./demo/manifest.json",
+  },
+
+  static: [{
+    source: './dist/css',
+    target: targetBaseDir + '/css'
+    }, {
+    source: './dist/fonts',
+    target: targetBaseDir + '/fonts'
+    }, {
+      source: './dist/icons',
+      target: targetBaseDir + '/icons'
+    }, {
+      source: './dist/images',
+      target: targetBaseDir + '/images'
+    }, {
+      source: './dist/js',
+      target: targetBaseDir + '/js'
+    }, {
       source: './static',
       target: './demo'
-    }
-  ],
-  sass: [
-    {
-      source: './src/styles/main.scss',
-      target: './demo/assets/vendor/nocc-bootstrap-theme/css/nocc-theme.css'
-    }
-  ],
-  manifest: {
-    target: "./dist/manifest.json",
-    key: "short",
-    baseURI: "../",
-    webRoot: "./dist"
-  },
+  }],
+  
 }
