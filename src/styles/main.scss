@@ -4,16 +4,16 @@
  * A Responsive Bootstrap 5 dual Theme
  */
 
+@use 'sass:color';
+@use 'sass:meta';
 @import './global';
 
 
 // Functions first (so you can manipulate colors, SVGs, calc, etc)
-//
 @import '../../bootstrap/scss/functions';
 
 
 // Overrides
-//
 @import './variables';
 @import './variables-dark';
 
@@ -21,14 +21,11 @@
 @import './mixins/hover';
 @import './mixins/color-mode';
 
-
 // Bootstrap defaults
-//
-@import '../../bootstrap/scss/bootstrap';
-
+// @import '../../bootstrap/scss/bootstrap';
+@import './bootstrap-sel';
 
 // NOCC customs
-//
 @import './maps';
 @import './root';
 @import './default';

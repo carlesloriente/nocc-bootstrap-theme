@@ -1,40 +1,50 @@
+/* stylelint-disable media-feature-range-notation */
 // Styling for the navbar
+
+@use 'sass:color';
+
 nav {
   position: absolute;
-  border-bottom: 1px solid $nocc-nav-white;
-  background-color: $nocc-nav-white-2;
+  border-bottom: 1px solid transparent;
+  background-color: transparent;
   font-family: $headings-font-family;
 
   .navbar-brand {
     text-decoration: none;
-    text-shadow: 1px 1px $white;
-    color: $gray-800;
+    text-shadow: 1px 1px $black;
+    color: $gray-200;
     font-size: medium;
     font-weight: 800;
-  }
+
+    &:focus,
+      &:hover {
+        color: fade-out($gray-400, .3);
+      }
+    }
 
   .navbar-toggler {
     padding: 13px;
+    cursor: pointer;
     text-transform: uppercase;
-    color: $gray-800;
+    color: $gray-200;
     font-size: .75rem;
     font-weight: 800;
+    background-color: rgba($color: $gray-200, $alpha: 40%)
   }
 
   .nav-item {
-
     a {
       text-transform: uppercase;
       text-decoration: $link-decoration;
-      text-shadow: 1px 1px $white;
+      text-shadow: 1px 1px $black;
       letter-spacing: 1px;
-      color: $gray-900;
+      color: $white;
       font-size: .75rem;
       font-weight: 800;
 
       &:focus,
       &:hover {
-        color: fade-out($bronze, .3);
+        color: fade-out($gray-400, .3);
       }
     }
 
@@ -90,7 +100,7 @@ nav {
       position: fixed;
       top: -67px;
       transition: transform .2s;
-      border-bottom: 1px solid darken($white, .05);
+      border-bottom: 1px solid color.adjust($white, $lightness: -.05%, $alpha: 0.2);
       background-color: fade-out($white, .1);
 
       .navbar-brand {
@@ -111,7 +121,10 @@ nav {
 
 .navbar {
   height: auto;
+  position: fixed;
 
+  --#{$prefix}navbar-hover-color: #{$navbar-light-hover-color};
+  
   @media only screen and (min-width: 990px) {
     height: 4rem;
   }

@@ -12,11 +12,17 @@ module.exports = {
   },
 
   static: [{
-    source: './dist/css',
-    target: targetBaseDir + '/css'
+      source: './src/styles',
+      target: './demo/assets/vendor/src/styles'
     }, {
-    source: './dist/fonts',
-    target: targetBaseDir + '/fonts'
+      source: './bootstrap/scss',
+      target: './demo/assets/vendor/bootstrap/scss'
+    }, {
+      source: './dist/css',
+      target: targetBaseDir + '/css'
+    }, {
+      source: './dist/fonts',
+      target: targetBaseDir + '/fonts'
     }, {
       source: './dist/icons',
       target: targetBaseDir + '/icons'

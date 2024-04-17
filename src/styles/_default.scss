@@ -1,3 +1,4 @@
+/* stylelint-disable media-feature-range-notation */
 body {
   margin: 0;
   background-color: var(--#{$prefix}body-bg);
@@ -25,14 +26,15 @@ body {
   flex-shrink: 0;
 }
 
+a {
+  text-decoration: underline;
+  color: var(--#{$prefix}link-color-base);
+}
+
 p {
   margin: .5rem 0 1.5rem;
   line-height: 1.5;
   font-family: $font-family-base;
-
-  a {
-    text-decoration: underline;
-  }
 }
 
 h1,
@@ -56,19 +58,22 @@ h3 {
   }
 }
 
-a {
-  text-decoration: underline;
-  color: var(--#{$prefix}link-color-base);
-
-  &:focus,
-  &:hover {
-    color: var(--#{$prefix}link-hover-color);
-  }
-}
-
 blockquote {
-  color: $gray-600;
-  font-style: italic;
+  margin: 1rem 3rem 2rem 1rem;
+  background-color: $gray-400;
+  border: 1px solid transparent;
+  border-radius: .6rem;
+  
+  strong {
+    color: $blue;
+  }
+
+  p {
+    margin: 0;
+    padding: .5rem;
+    color: $gray-900;
+    font-style: normal;
+  }
 }
 
 .section-heading {
@@ -94,8 +99,9 @@ pre {
   border: 1px solid transparent;
   border-radius: .6rem;
   background-color: $black;
-  padding: 1.3rem 0;
-  font-size: $code-font-size;
+  padding: 0.4rem 1rem 1.5rem 1.5rem;
+  font-size: 80%;
+  text-wrap: wrap;
 
   code {
     color: var(--#{$prefix}code-color);
@@ -135,8 +141,8 @@ pre {
     font-family: $headings-font-family;
     font-size: 1.2rem;
   }
-  @media only screen and (min-width: 992px) {
 
+  @media only screen and (min-width: 992px) {
     img {
       display: inline;
       visibility: visible;
@@ -276,7 +282,6 @@ small {
   font-weight: 400;
 }
 
-//
 // Visually hidden
 
 .visually-hidden,

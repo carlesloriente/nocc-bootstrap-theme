@@ -1,3 +1,4 @@
+/* stylelint-disable media-feature-range-notation */
 // Styling for the post page
 .num-posts {
   position: absolute;
@@ -5,7 +6,6 @@
 }
 
 .post-preview {
-
   >a {
     color: var(--#{$prefix}secondary-color);
 
@@ -13,17 +13,6 @@
     &:hover {
       text-decoration: $link-decoration;
       color: var(--#{$prefix}primary-color);
-    }
-
-    >.post-title {
-      margin-top: 30px;
-      margin-bottom: 10px;
-      text-transform: lowercase;
-      font-size: 30px;
-
-      &::first-letter {
-        text-transform: uppercase;
-      }
     }
 
     >.post-subtitle {
@@ -51,14 +40,6 @@
       &:hover {
         text-decoration: underline;
         color: var(--#{$prefix}primary-color);
-      }
-    }
-  }
-
-  @media only screen and (min-width: 768px) {
-    >a {
-      >.post-title {
-        font-size: 36px;
       }
     }
   }

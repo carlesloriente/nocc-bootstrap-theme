@@ -1,4 +1,7 @@
 // Bootstrap overrides for this template
+
+@use 'sass:color';
+
 .btn {
   display: inline-block;
   margin-right: 15px;
@@ -45,17 +48,16 @@
   fieldset {
     :disabled & {
       @include box-shadow(none);
+
       opacity: $btn-disabled-opacity;
     }
   }
 }
 
 // Future-proof disabling of clicks on `<a>` elements
-a {
-  .btn {
-    .disabled {
-      pointer-events: none;
-    }
+a.btn {
+  .disabled {
+    pointer-events: none;
   }
 }
 
@@ -69,9 +71,9 @@ a {
   &:hover,
   &:focus,
   &:active {
-    border-color: darken($cyan, 7.5);
+    border-color: color.adjust($cyan, $lightness: -7.5%, $alpha: 0.2);
     box-shadow: $btn-shadow;
-    background-color: darken($primary, 7.5);
+    background-color: color.adjust($primary, $lightness: -7.5%, $alpha: 0.2);
     color: $white;
   }
 }
@@ -85,9 +87,9 @@ a {
   &:hover,
   &:focus,
   &:active {
-    border-color: darken($gray-600, 7.5);
+    border-color: color.adjust($gray-600, $lightness: -7.5%, $alpha: 0.2);
     box-shadow: $btn-shadow;
-    background-color: darken($secondary, 7.5);
+    background-color: color.adjust($secondary, $lightness: -7.5%, $alpha: 0.2);
     color: $white;
   }
 }
@@ -101,9 +103,9 @@ a {
   &:hover,
   &:focus,
   &:active {
-    border-color: darken($gray-600, 7.5);
+    border-color: color.adjust($gray-600, $lightness: -7.5%, $alpha: 0.2);
+    background-color: color.adjust($secondary, $lightness: -7.5%, $alpha: 0.2);
     box-shadow: $btn-shadow;
-    background-color: darken($red, 7.5);
     color: $white;
   }
 }
@@ -117,9 +119,9 @@ a {
   &:hover,
   &:focus,
   &:active {
-    border-color: darken($orange, 7.5);
+    border-color: color.adjust($orange, $lightness: -7.5%, $alpha: 0.2);
     box-shadow: $btn-shadow;
-    background-color: darken($bronze, 7.5);
+    background-color: color.adjust($bronze, $lightness: -7.5%, $alpha: 0.2);
     color: $white;
   }
 }
@@ -132,9 +134,33 @@ a {
   &:hover,
   &:focus,
   &:active {
-    border-color: darken($orange, 7.5);
-    background-color: darken($bronze, 7.5);
+    border-color: color.adjust($orange, $lightness: -7.5%, $alpha: 0.2);
+    background-color: color.adjust($bronze, $lightness: -7.5%, $alpha: 0.2);
   }
+}
+
+.btn-clipboard {
+  margin: 0.5rem auto;
+  border: .1rem solid $white;
+  border-radius: .3rem;
+  background-color: $black;
+  cursor: pointer;
+  padding: .5rem;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: var(--bs-code-color);
+  }
+}
+
+.clipboard {
+  display: block;
+  background-image: url('../icons/1.11.0/clipboard.svg');
+  background-repeat: no-repeat;
+  background-size: 12px auto;
+  width: 12px;
+  height: 12px;
 }
 
 .daylight {
@@ -153,8 +179,30 @@ a {
   height: 24px;
 }
 
+.tooltip {
+  position: inherit;
+  display: inline-block;
+}
 
-//
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  border: .1rem solid $white;
+  border-radius: .3rem;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
 // Alternate buttons
 
 @each $color, $value in $theme-colors {
@@ -170,17 +218,15 @@ a {
   }
 }
 
-
-//
 // Link buttons
-//
-
 // Make a button look and behave like a link
+
 .btn-link {
   @include hover {
     text-decoration: var(--#{$prefix}link-hover-decoration);
     color: var(--#{$prefix}link-hover-color);
   }
+
   text-decoration: $link-decoration;
   color: var(--#{$prefix}link-color-base);
   font-weight: $font-weight-normal;
@@ -197,8 +243,6 @@ a {
   }
 }
 
-
-//
 // Button Sizes
 
 .btn-lg {
@@ -209,7 +253,6 @@ a {
   @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-line-height-sm, $btn-border-radius-sm);
 }
 
-//
 // Block button
 
 .btn-block {

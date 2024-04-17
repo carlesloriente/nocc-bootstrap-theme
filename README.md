@@ -60,6 +60,7 @@ You'll find all the required directories and files within the download, logicall
 
 - [Bootstrap 5.3.3](https://getbootstrap.com)
 - [jQuery 3.7.1](https://jquery.com)
+- [Clipboard.js 2.0.11](https://clipboardjs.com)
 - [jCloud 2.0.3](https://github.com/mistic100/jQCloud)
 - [Roboto Sans-serif](https://fonts.google.com/specimen/Roboto), [Lora Serif](https://fonts.google.com/specimen/Lora), and [Oxygen Mono](https://fonts.google.com/specimen/Oxygen+Mono) font families
 - [A few Bootstrap 5 icons](https://icons.getbootstrap.com)
@@ -75,13 +76,13 @@ Just follow the instructions below.
 The package folder structure looks like this:
 
 ```filesystem
-nocc-bootstrap-theme/
-├─ css/
-├─ fonts/
-├─ icons/
-├─ images/
-├─ js/
-└─ src/
+  nocc-bootstrap-theme/
+  ├─ css/
+  ├─ fonts/
+  ├─ icons/
+  ├─ images/
+  ├─ js/
+  └─ src/
 ```
 
 - The `css/nocc-theme.css` (or the minified `nocc-theme.min.css`) file loads the fonts and icons. Remember to include JavaScript files and images in your project.
@@ -108,18 +109,18 @@ You can change or use this theme in your own Sass code; please download the sour
 The folder structure looks like this:
 
 ```filesystem
-nocc-bootstrap-theme/
-├─ bootstrap/
-├─ scripts/
-├─ src/
-|  ├─ fonts/
-|  ├─ icons/
-|  ├─ images/
-|  ├─ js/
-|  └─ styles/
-└─ static/
-   ├─ gallery/
-   └─ posts/
+  nocc-bootstrap-theme/
+  ├─ bootstrap/
+  ├─ scripts/
+  ├─ src/
+  |  ├─ fonts/
+  |  ├─ icons/
+  |  ├─ images/
+  |  ├─ js/
+  |  └─ styles/
+  └─ static/
+    ├─ gallery/
+    └─ posts/
 ```
 
 Install node modules, run the command:

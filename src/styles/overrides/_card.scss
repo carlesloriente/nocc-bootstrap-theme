@@ -1,6 +1,5 @@
-//
+/* stylelint-disable declaration-block-no-redundant-longhand-properties */
 // Base styles
-//
 
 .card {
   @include border-radius($card-border-radius);
@@ -22,6 +21,10 @@
     cursor: pointer;
   }
 
+  h2 {
+    color: $white;
+  }
+  
   >hr {
     margin-right: 0;
     margin-left: 0;
@@ -33,11 +36,13 @@
 
     &:first-child {
       @include border-top-radius($card-inner-border-radius);
+      
       border-top-width: 0;
     }
 
     &:last-child  {
       @include border-bottom-radius($card-inner-border-radius);
+
       border-bottom-width: 0;
     }
   }
@@ -123,7 +128,6 @@
 
 
 // Header navs
-//
 
 .card-header-tabs {
   margin-right: calc($card-spacer-x / 2);
@@ -140,6 +144,7 @@
 // Card image
 .card-img-overlay {
   @include border-radius($card-inner-border-radius);
+  
   position: absolute;
   top: 0;
   right: 0;
@@ -189,9 +194,7 @@
   }
 }
 
-
 // Card groups
-//
 
 .card-group {
   // The child selector allows nested `.card` within `.card-group`
@@ -204,8 +207,6 @@
   @include media-breakpoint-up(sm) {
     display: flex;
     flex-flow: row wrap;
-    // The child selector allows nested `.card` within `.card-group`
-    // to display properly.
 
     >.card {
       // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
@@ -255,9 +256,7 @@
   }
 }
 
-
 // Columns
-//
 
 .card-columns {
   .card {
@@ -276,9 +275,7 @@
   }
 }
 
-
 // Accordion
-//
 
 .accordion {
   overflow-anchor: none;
@@ -288,6 +285,7 @@
 
     &:not(:last-of-type) {
       @include border-bottom-radius(0);
+
       border-bottom: 0;
     }
 
@@ -297,6 +295,7 @@
 
     >.card-header {
       @include border-radius(0);
+
       margin-bottom: $card-border-width;
     }
   }

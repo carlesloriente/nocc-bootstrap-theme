@@ -33,6 +33,7 @@
 
 .carousel-item {
   @include transition($carousel-transition);
+
   display: none;
   position: relative;
   float: left;
@@ -45,19 +46,19 @@
   .carousel-item-prev {
     display: block;
   }
-
-  img {
-    position: relative;
-    background: no-repeat center;
-    background-attachment: scroll;
-    background-color: $nocc-grey;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-  }
 }
 
-.carousel-item-next {
+.carousel-item.img {
+  position: relative;
+  background: no-repeat center;
+  background-attachment: scroll;
+  background-color: $nocc-grey;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item .carousel-item-next {
   &:not(.carousel-item-start),
   &.active {
     .carousel-item-end {
@@ -66,7 +67,7 @@
   }
 }
 
-.carousel-item-prev {
+.carousel-item .carousel-item-prev {
   &:not(.carousel-item-end),
   &.active {
     .carousel-item-start {
@@ -75,11 +76,9 @@
   }
 }
 
-//
 // Alternate transitions
 
 .carousel-fade {
-
   .carousel-item {
     transform: none;
     opacity: 0;
@@ -90,23 +89,23 @@
       z-index: 899;
     }
   }
+}
 
-  .active {
-    .carousel-item-start,
-    .carousel-item-end {
-      @include transition(opacity 0s $carousel-transition-duration);
-      opacity: 0;
-      z-index: 899;
-    }
+.carousel.fade .active {
+  .carousel-item-start,
+  .carousel-item-end {
+    @include transition(opacity 0s $carousel-transition-duration);
+    
+    opacity: 0;
+    z-index: 899;
   }
 }
 
 
-//
 // Left/right controls for nav
 
-.carousel-control-prev,
-.carousel-control-next {
+.carousel:hover .carousel-control-prev,
+.carousel:hover .carousel-control-next {
   @include transition($carousel-control-transition);
 
   // Hover/focus state
@@ -134,19 +133,21 @@
   color: $carousel-control-color;
 }
 
-.carousel-control-prev {
+.carousel:hover .carousel-control-prev {
   left: 0;
   border: 0;
   background: none;
+
   @if $enable-gradients {
     background-image: linear-gradient(90deg, $nocc-carousel-ctrl-start, $nocc-carousel-ctrl-end);
   }
 }
 
-.carousel-control-next {
+.carousel:hover .carousel-control-next {
   right: 0;
   border: 0;
   background: none;
+
   @if $enable-gradients {
     background-image: linear-gradient(270deg, $nocc-carousel-ctrl-start, $nocc-carousel-ctrl-end);
   }

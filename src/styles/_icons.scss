@@ -17,6 +17,7 @@
     height: 1.8rem;
   }
 
+  /* stylelint-disable-next-line media-feature-range-notation */
   @media only screen and (min-width: 768px) {
     border-radius: .8rem;
     width: 4rem;
@@ -37,9 +38,13 @@ icon-grid {
 
 .row-cols-2 {
   min-width: 100%;
+
+  /* stylelint-disable-next-line media-feature-range-notation */
   @media only screen and (min-width: 420px) {
     min-width: 45%;
   }
+
+  /* stylelint-disable-next-line media-feature-range-notation */
   @media only screen and (min-width: 922px) {
     min-width: 35%;
   }

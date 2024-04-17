@@ -1,3 +1,6 @@
+
+@use 'sass:meta';
+
 $color-mode-type: data;
 
 :root {
@@ -11,6 +14,7 @@ $color-mode-type: data;
     #{--#{$prefix}}emphasis-color: #{$body-emphasis-color};
     #{--#{$prefix}}emphasis-color-rgb: #{$body-emphasis-color};
     #{--#{$prefix}}primary-color: #{$body-primary-color};
+    #{--#{$prefix}}gradient: #{$nav-gradient-light};
     #{--#{$prefix}}secondary-color: #{$body-secondary-color};
     #{--#{$prefix}}secondary-color-rgb: #{$body-secondary-color};
     #{--#{$prefix}}secondary-bg: #{$body-secondary-bg};
@@ -23,6 +27,8 @@ $color-mode-type: data;
     #{--#{$prefix}}tertiary-bg-rgb: #{$body-tertiary-bg};
     #{--#{$prefix}}badge-font-family: #{$headings-font-family};
     #{--#{$prefix}}badge-font-weight: #{$font-weight-normal};
+    #{--#{$prefix}}hs-color: #{$hs-color-light};
+    #{--#{$prefix}}small-head-color: #{$small-head-color-light};
 
     @each $color, $value in $colors {
       #{--#{$prefix}}#{$color}: #{$value};
@@ -36,7 +42,7 @@ $color-mode-type: data;
       #{--#{$prefix}}breakpoint-#{$bp}: #{$value};
     }
 
-    #{--#{$prefix}}heading-color: #{$headings-color};
+    #{--#{$prefix}}heading-color: #{heading-color-light};
     #{--#{$prefix}}link-color-base: #{$link-color};
     #{--#{$prefix}}link-hover-color: #{$link-hover-color};
     #{--#{$prefix}}link-color-rgb: #{$link-color};
@@ -53,8 +59,8 @@ $color-mode-type: data;
     #{--#{$prefix}}form-valid-border-color: #{$form-valid-border-color};
     #{--#{$prefix}}form-invalid-color: #{$form-invalid-color};
     #{--#{$prefix}}form-invalid-border-color: #{$form-invalid-border-color};
-    #{--#{$prefix}}font-family-sans-serif: #{inspect($font-family-sans-serif)};
-    #{--#{$prefix}}font-family-monospace: #{inspect($font-family-monospace)};
+    #{--#{$prefix}}font-family-sans-serif: #{meta.inspect($font-family-sans-serif)};
+    #{--#{$prefix}}font-family-monospace: #{meta.inspect($font-family-monospace)};
 
   }
 }
@@ -70,6 +76,7 @@ $color-mode-type: data;
   #{--#{$prefix}}emphasis-color: #{$body-emphasis-color-dark};
   #{--#{$prefix}}emphasis-color-rgb: #{$body-emphasis-color-dark};
   #{--#{$prefix}}primary-color: #{$body-primary-color-dark};
+  #{--#{$prefix}}gradient: #{$nav-gradient-dark};
   #{--#{$prefix}}secondary-color: #{$body-secondary-color-dark};
   #{--#{$prefix}}secondary-color-rgb: #{$body-secondary-color-dark};
   #{--#{$prefix}}secondary-bg: #{$body-secondary-bg-dark};
@@ -82,6 +89,8 @@ $color-mode-type: data;
   #{--#{$prefix}}tertiary-bg-rgb: #{$body-tertiary-bg-dark};
   #{--#{$prefix}}badge-font-family: #{$headings-font-family};
   #{--#{$prefix}}badge-font-weight: #{$font-weight-normal};
+  #{--#{$prefix}}hs-color: #{$hs-color-dark};
+  #{--#{$prefix}}small-head-color: #{$small-head-color-dark};
 
   @each $color, $value in $theme-colors-text-dark {
     #{--#{$prefix}}#{$color}-text-emphasis: #{$value};
