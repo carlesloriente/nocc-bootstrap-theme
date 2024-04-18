@@ -1,24 +1,31 @@
 // Bootstrap overrides for this template
+
+@use "sass:color";
+
 .btn {
+  user-select: none;
+
   display: inline-block;
+
   margin-right: 15px;
-  border: $btn-border-width solid transparent;
-  background-color: transparent;
   padding: 15px 25px;
-  vertical-align: middle;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 1px;
-  white-space: $btn-white-space;
+
   font-family: $btn-font-family;
   font-size: $btn-font-size;
   font-weight: 900;
-  user-select: none;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: $btn-white-space;
+  vertical-align: middle;
+
+  background-color: transparent;
+  border: $btn-border-width solid transparent;
 
   &:hover {
-    text-decoration: $link-decoration;
     color: var(--#{$prefix}body-color);
+    text-decoration: $link-decoration;
   }
 
   .btn-check {
@@ -35,7 +42,10 @@
       @include box-shadow($btn-active-box-shadow);
 
       &:focus {
-        @include box-shadow($input-btn-focus-box-shadow, $btn-active-box-shadow);
+        @include box-shadow(
+          $input-btn-focus-box-shadow,
+          $btn-active-box-shadow
+        );
       }
     }
   }
@@ -45,116 +55,170 @@
   fieldset {
     :disabled & {
       @include box-shadow(none);
+
       opacity: $btn-disabled-opacity;
     }
   }
 }
 
 // Future-proof disabling of clicks on `<a>` elements
-a {
-  .btn {
-    .disabled {
-      pointer-events: none;
-    }
+a.btn {
+  .disabled {
+    pointer-events: none;
   }
 }
 
 .btn-primary {
-  border-radius: $border-radius-lg * 3;
-  border-color: $cyan;
-  background-color: var(--#{$prefix}primary-color);
-  color: $white;
   font-size: $btn-font-size;
+  color: $white;
+
+  background-color: var(--#{$prefix}primary-color);
+  border-color: $cyan;
+  border-radius: $border-radius-lg * 3;
 
   &:hover,
   &:focus,
   &:active {
-    border-color: darken($cyan, 7.5);
-    box-shadow: $btn-shadow;
-    background-color: darken($primary, 7.5);
     color: $white;
+    background-color: color.adjust($primary, $lightness: -7.5%, $alpha: 0.2);
+    border-color: color.adjust($cyan, $lightness: -7.5%, $alpha: 0.2);
+    box-shadow: $btn-shadow;
   }
 }
 
 .btn-secondary {
-  border-radius: $border-radius-lg * 2;
-  border-color: var(--#{$prefix}info);
-  background-color: $body-tertiary-color;
   color: $white;
+  background-color: $body-tertiary-color;
+  border-color: var(--#{$prefix}info);
+  border-radius: $border-radius-lg * 2;
 
   &:hover,
   &:focus,
   &:active {
-    border-color: darken($gray-600, 7.5);
-    box-shadow: $btn-shadow;
-    background-color: darken($secondary, 7.5);
     color: $white;
+    background-color: color.adjust($secondary, $lightness: -7.5%, $alpha: 0.2);
+    border-color: color.adjust($gray-600, $lightness: -7.5%, $alpha: 0.2);
+    box-shadow: $btn-shadow;
   }
 }
 
 .btn-tertiary {
-  border-radius: $border-radius-lg * 2;
-  border-color: var(--#{$prefix}info);
-  background-color: $red;
   color: $white;
+  background-color: $red;
+  border-color: var(--#{$prefix}info);
+  border-radius: $border-radius-lg * 2;
 
   &:hover,
   &:focus,
   &:active {
-    border-color: darken($gray-600, 7.5);
-    box-shadow: $btn-shadow;
-    background-color: darken($red, 7.5);
     color: $white;
+    background-color: color.adjust($secondary, $lightness: -7.5%, $alpha: 0.2);
+    border-color: color.adjust($gray-600, $lightness: -7.5%, $alpha: 0.2);
+    box-shadow: $btn-shadow;
   }
 }
 
 .btn-download {
+  color: $white;
+  background-color: $bronze;
   border: $btn-border-width solid $orange;
   border-radius: $border-radius-lg * 2;
-  background-color: $bronze;
-  color: $white;
 
   &:hover,
   &:focus,
   &:active {
-    border-color: darken($orange, 7.5);
-    box-shadow: $btn-shadow;
-    background-color: darken($bronze, 7.5);
     color: $white;
+    background-color: color.adjust($bronze, $lightness: -7.5%, $alpha: 0.2);
+    border-color: color.adjust($orange, $lightness: -7.5%, $alpha: 0.2);
+    box-shadow: $btn-shadow;
   }
 }
 
 .btn-toggle {
-  border-radius: 20%;
-  border-color: $gray-600;
   background-color: $black;
+  border-color: $gray-600;
+  border-radius: 20%;
 
   &:hover,
   &:focus,
   &:active {
-    border-color: darken($orange, 7.5);
-    background-color: darken($bronze, 7.5);
+    background-color: color.adjust($bronze, $lightness: -7.5%, $alpha: 0.2);
+    border-color: color.adjust($orange, $lightness: -7.5%, $alpha: 0.2);
   }
 }
 
-.daylight {
-  background-image: url('../icons/1.11.0/sun.svg');
+.btn-clipboard {
+  cursor: pointer;
+
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+
+  background-color: $black;
+  border: 0.1rem solid $white;
+  border-radius: 0.3rem;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: var(--bs-code-color);
+  }
+}
+
+.clipboard {
+  display: block;
+
+  width: 12px;
+  height: 12px;
+
+  background-image: url("../icons/1.11.0/clipboard.svg");
   background-repeat: no-repeat;
-  background-size: 24px auto;
+  background-size: 12px auto;
+}
+
+.daylight {
   width: 24px;
   height: 24px;
+
+  background-image: url("../icons/1.11.0/sun.svg");
+  background-repeat: no-repeat;
+  background-size: 24px auto;
 }
 
 .nightlight {
-  background-image: url('../icons/1.11.0/moon.svg');
-  background-repeat: no-repeat;
-  background-size: 24px auto;
   width: 24px;
   height: 24px;
+
+  background-image: url("../icons/1.11.0/moon.svg");
+  background-repeat: no-repeat;
+  background-size: 24px auto;
 }
 
+.tooltip {
+  position: inherit;
+  display: inline-block;
+}
 
-//
+.tooltip .tooltiptext {
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+
+  width: 120px;
+  padding: 5px 0;
+
+  color: #fff;
+  text-align: center;
+
+  visibility: hidden;
+  background-color: black;
+  border: 0.1rem solid $white;
+  border-radius: 0.3rem;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
 // Alternate buttons
 
 @each $color, $value in $theme-colors {
@@ -163,27 +227,24 @@ a {
   }
 }
 
-
 @each $color, $value in $theme-colors {
   .btn-outline-#{$color} {
     @include button-outline-variant($value);
   }
 }
 
-
-//
 // Link buttons
-//
-
 // Make a button look and behave like a link
+
 .btn-link {
   @include hover {
-    text-decoration: var(--#{$prefix}link-hover-decoration);
     color: var(--#{$prefix}link-hover-color);
+    text-decoration: var(--#{$prefix}link-hover-decoration);
   }
-  text-decoration: $link-decoration;
-  color: var(--#{$prefix}link-color-base);
+
   font-weight: $font-weight-normal;
+  color: var(--#{$prefix}link-color-base);
+  text-decoration: $link-decoration;
 
   &:focus,
   &.focus {
@@ -192,24 +253,31 @@ a {
 
   &:disabled,
   &.disabled {
-    color: $btn-link-disabled-color;
     pointer-events: none;
+    color: $btn-link-disabled-color;
   }
 }
 
-
-//
 // Button Sizes
 
 .btn-lg {
-  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-line-height-lg, $btn-border-radius-lg);
+  @include button-size(
+    $btn-padding-y-lg,
+    $btn-padding-x-lg,
+    $btn-line-height-lg,
+    $btn-border-radius-lg
+  );
 }
 
 .btn-sm {
-  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-line-height-sm, $btn-border-radius-sm);
+  @include button-size(
+    $btn-padding-y-sm,
+    $btn-padding-x-sm,
+    $btn-line-height-sm,
+    $btn-border-radius-sm
+  );
 }
 
-//
 // Block button
 
 .btn-block {
@@ -217,16 +285,16 @@ a {
   width: 100%;
 
   // Vertically space out multiple block buttons
-  +.btn-block {
+  + .btn-block {
     margin-top: $btn-block-spacing-y;
   }
 }
 
 // Specificity overrides
 input {
-  &[type='submit'],
-  &[type='reset'],
-  &[type='button'] {
+  &[type="submit"],
+  &[type="reset"],
+  &[type="button"] {
     &.btn-block {
       width: 100%;
     }
@@ -234,5 +302,5 @@ input {
 }
 
 .fade {
-  transition: opacity .15s linear;
+  transition: opacity 0.15s linear;
 }

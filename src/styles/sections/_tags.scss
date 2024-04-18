@@ -1,6 +1,7 @@
+/* stylelint-disable media-feature-range-notation */
 .tags-heading {
   a {
-    color:  $white;
+    color: $white;
   }
 }
 
@@ -27,70 +28,69 @@
   font-family: $headings-font-family;
 
   .w10 {
-    color: $nocc-tag-10;
     font-size: 170%;
     font-weight: 900;
+    color: $nocc-tag-10;
   }
 
   .w9 {
-    color: $nocc-tag-9;
     font-size: 160%;
     font-weight: 900;
+    color: $nocc-tag-9;
   }
 
   .w8 {
-    color: $nocc-tag-8;
     font-size: 150%;
     font-weight: 700;
+    color: $nocc-tag-8;
   }
 
   .w7 {
-    color: $nocc-tag-7;
     font-size: 140%;
     font-weight: 700;
+    color: $nocc-tag-7;
   }
 
   .w6 {
-    color: $nocc-tag-6;
     font-size: 130%;
     font-weight: 500;
+    color: $nocc-tag-6;
   }
 
   .w5 {
-    color: $nocc-tag-5;
     font-size: 120%;
     font-weight: 500;
+    color: $nocc-tag-5;
   }
 
   .w4 {
-    color: $nocc-tag-4;
     font-size: 110%;
     font-weight: 300;
+    color: $nocc-tag-4;
   }
 
   .w3 {
-    color: $nocc-tag-3;
     font-size: 100%;
     font-weight: 300;
+    color: $nocc-tag-3;
   }
 
   .w2 {
-    color: $nocc-tag-2;
     font-size: 90%;
     font-weight: 300;
+    color: $nocc-tag-2;
   }
 
   .w1 {
-    color: $nocc-tag-1;
     font-size: 80%;
     font-weight: 300;
+    color: $nocc-tag-1;
   }
 
-
   a {
-    text-decoration: none;
-    color: inherit;
     font-family: $headings-font-family;
+    color: inherit;
+    text-decoration: none;
 
     &:focus,
     &:hover {

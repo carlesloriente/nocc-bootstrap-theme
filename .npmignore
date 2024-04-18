@@ -7,7 +7,6 @@
 faucet.config.dev.js
 faucet.config.js
 package-lock.json
-package.json
 techstack.md
 techstack.yml
 bootstrap/
@@ -15,5 +14,4 @@ demo/
 node_modules/
 dist/
 scripts/
-static/
 src/
