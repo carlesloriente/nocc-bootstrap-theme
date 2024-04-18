@@ -36,7 +36,6 @@
     }
   ],
   "scripts": {
-    "dist": "./scripts/dist",
     "minifier": "npm run css-min && npm run js-min",
     "css-min": "cleancss -O2 ./dist/css/nocc-theme.css -o ./dist/css/nocc-theme.min.css",
     "js-min": "uglifyjs ./dist/js/theme-toggler.js -c -o ./dist/js/theme-toggler.min.js && uglifyjs ./dist/js/jq-bootstrap-validation.js -c -o ./dist/js/jq-bootstrap-validation.min.js",
