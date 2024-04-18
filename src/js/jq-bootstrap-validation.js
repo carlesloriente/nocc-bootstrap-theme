@@ -157,7 +157,7 @@
                       l = [];
                     return (
                       a.each(h, function (t, n) {
-                        (o || o.length || (i && i.includeEmpty) || (r.validatorTypes[t].blockSubmit && i && i.submitting)) &&
+                        (o || (i && i.includeEmpty) || (r.validatorTypes[t].blockSubmit && i && i.submitting)) &&
                           a.each(n, function (a, i) {
                             r.validatorTypes[t].validate(e, o, i) && l.push(i.message);
                           });
@@ -256,6 +256,7 @@
             },
             validate: function (a, t, e) {
               if (e.lastValue === t && e.lastFinished) return !e.lastValid;
+              // deepcode ignore OperatorPrecedence: <please specify a reason of ignoring this>
               if (!0 === e.lastFinished) {
                 (e.lastValue = t), (e.lastValid = !0), (e.lastFinished = !1);
                 var i = e,
@@ -283,8 +284,11 @@
               return { validatorName: t, url: a.data("validation" + t + "Ajax"), lastValue: a.val(), lastValid: !0, lastFinished: !0 };
             },
             validate: function (t, e, i) {
+              // deepcode ignore OperatorPrecedence: <please specify a reason of ignoring this>
               return "" + i.lastValue == "" + e && !0 === i.lastFinished
+                // deepcode ignore OperatorPrecedence: <please specify a reason of ignoring this>
                 ? !1 === i.lastValid
+                // deepcode ignore OperatorPrecedence: <please specify a reason of ignoring this>
                 : (!0 === i.lastFinished &&
                     ((i.lastValue = e),
                     (i.lastValid = !0),

@@ -1,3 +1,4 @@
+/* stylelint-disable media-feature-range-notation */
 // Styling for the post page
 .num-posts {
   position: absolute;
@@ -5,31 +6,19 @@
 }
 
 .post-preview {
-
-  >a {
+  > a {
     color: var(--#{$prefix}secondary-color);
 
     &:focus,
     &:hover {
-      text-decoration: $link-decoration;
       color: var(--#{$prefix}primary-color);
+      text-decoration: $link-decoration;
     }
 
-    >.post-title {
-      margin-top: 30px;
-      margin-bottom: 10px;
-      text-transform: lowercase;
-      font-size: 30px;
-
-      &::first-letter {
-        text-transform: uppercase;
-      }
-    }
-
-    >.post-subtitle {
+    > .post-subtitle {
       margin: 0 0 10px;
-      text-transform: lowercase;
       font-weight: 300;
+      text-transform: lowercase;
 
       &::first-letter {
         text-transform: uppercase;
@@ -37,28 +26,20 @@
     }
   }
 
-  >.post-meta {
+  > .post-meta {
     margin-top: 0;
-    color: $gray-600;
     font-size: 16px;
     font-style: italic;
+    color: $gray-600;
 
-    >a {
-      text-decoration: $link-decoration;
+    > a {
       color: var(--#{$prefix}secondary-color);
+      text-decoration: $link-decoration;
 
       &:focus,
       &:hover {
-        text-decoration: underline;
         color: var(--#{$prefix}primary-color);
-      }
-    }
-  }
-
-  @media only screen and (min-width: 768px) {
-    >a {
-      >.post-title {
-        font-size: 36px;
+        text-decoration: underline;
       }
     }
   }

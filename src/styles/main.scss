@@ -1,51 +1,47 @@
 /*!
- * NOCC Bootstrap theme 1.2.0 (https://github.com/carlesloriente/nocc-bootstrap-theme/)
+ * NOCC Bootstrap theme 1.2.1 (https://github.com/carlesloriente/nocc-bootstrap-theme/)
  * Copyright 2024 Carles Loriente
  * A Responsive Bootstrap 5 dual Theme
  */
 
-@import './global';
+@use "sass:color";
+@use "sass:meta";
 
+@import "./global";
 
 // Functions first (so you can manipulate colors, SVGs, calc, etc)
-//
-@import '../../bootstrap/scss/functions';
-
+@import "../../bootstrap/scss/functions";
 
 // Overrides
-//
-@import './variables';
-@import './variables-dark';
+@import "./variables";
+@import "./variables-dark";
 
 // Mixins
-@import './mixins/hover';
-@import './mixins/color-mode';
-
+@import "./mixins/hover";
+@import "./mixins/color-mode";
 
 // Bootstrap defaults
-//
-@import '../../bootstrap/scss/bootstrap';
-
+// @import '../../bootstrap/scss/bootstrap';
+@import "./bootstrap-sel";
 
 // NOCC customs
-//
-@import './maps';
-@import './root';
-@import './default';
-@import './fonts';
-@import './icons';
+@import "./maps";
+@import "./root";
+@import "./default";
+@import "./fonts";
+@import "./icons";
 
 // Components
-@import './overrides/buttons';
-@import './overrides/card';
-@import './overrides/carousel';
-@import './overrides/dividers';
-@import './overrides/navbar';
-@import './overrides/type';
+@import "./overrides/buttons";
+@import "./overrides/card";
+@import "./overrides/carousel";
+@import "./overrides/dividers";
+@import "./overrides/navbar";
+@import "./overrides/type";
 
 // Sections
-@import './sections/contact';
-@import './sections/footer';
-@import './sections/masthead';
-@import './sections/post';
-@import './sections/tags';
+@import "./sections/contact";
+@import "./sections/footer";
+@import "./sections/masthead";
+@import "./sections/post";
+@import "./sections/tags";

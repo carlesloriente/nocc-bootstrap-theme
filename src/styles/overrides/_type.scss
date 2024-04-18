@@ -1,6 +1,4 @@
 // stylelint-disable selector-list-comma-newline-after
-
-//
 // Headings
 
 h1,
@@ -9,17 +7,15 @@ h3,
 h4,
 h5,
 h6,
-h1,
 .h2,
 .h3,
 .h4,
 .h5,
 .h6 {
   margin-bottom: $headings-margin-bottom;
-  line-height: $headings-line-height;
-  color: $headings-color;
   font-family: $headings-font-family;
   font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
 }
 
 h1,
@@ -54,36 +50,39 @@ h6,
 
 .lead {
   @include font-size($lead-font-size);
+
   font-weight: $lead-font-weight;
 }
 
 // Type display classes
 .display-1 {
   @include font-size($display1-size);
-  line-height: $display-line-height;
+
   font-weight: $display1-weight;
+  line-height: $display-line-height;
 }
 
 .display-2 {
   @include font-size($display2-size);
-  line-height: $display-line-height;
+
   font-weight: $display2-weight;
+  line-height: $display-line-height;
 }
 
 .display-3 {
   @include font-size($display3-size);
-  line-height: $display-line-height;
+
   font-weight: $display3-weight;
+  line-height: $display-line-height;
 }
 
 .display-4 {
   @include font-size($display4-size);
-  line-height: $display-line-height;
+
   font-weight: $display4-weight;
+  line-height: $display-line-height;
 }
 
-
-//
 // Horizontal rules
 
 hr {
@@ -93,18 +92,15 @@ hr {
   border-top: $hr-border-width solid $hr-border-color;
 }
 
-
-//
 // Emphasis
 
 small,
 .small {
   @include font-size($small-font-size);
+
   font-weight: $font-weight-normal;
 }
 
-
-//
 // Lists
 
 .list-unstyled {
@@ -124,28 +120,29 @@ small,
   }
 }
 
-
-//
 // Misc
 
 // Builds on `abbr`
 .initialism {
   @include font-size(90%);
+
   text-transform: uppercase;
 }
 
 // Blockquotes
 .blockquote {
   @include font-size($blockquote-font-size);
+
   margin-bottom: $spacer;
 }
 
 .blockquote-footer {
   @include font-size($blockquote-small-font-size);
+
   display: block;
   color: $blockquote-small-color;
 
   &::before {
-    content: '\2014\00A0'; // em dash, nbsp
+    content: "\2014\00A0"; // em dash, nbsp
   }
 }

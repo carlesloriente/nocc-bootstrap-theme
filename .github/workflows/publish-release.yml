@@ -22,15 +22,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org/'
       - run: |
           npm ci
-          npm run dist
-      - name: CSS Minifier
-        uses: devatherock/minify-js@v3.0.0
-        with:
-          directory: 'dist/css'
-      - name: JS Minifier
-        uses: devatherock/minify-js@v3.0.0
-        with:
-          directory: 'dist/js'
+          npm run compile
       - name: Apply version bump (major)
         if: contains(github.event.pull_request.labels.*.name, 'major')
         run: cd dist/ && npm version major --git-tag-version

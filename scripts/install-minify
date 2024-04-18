@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-set -ex
-
-sudo dnf install -y git make
-mkdir minify_src
-cd minify_src
-git clone https://github.com/tdewolff/minify.git .
-make install  && cd ..

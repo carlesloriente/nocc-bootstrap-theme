@@ -1,12 +1,15 @@
+/* stylelint-disable media-feature-range-notation */
 body {
   margin: 0;
-  background-color: var(--#{$prefix}body-bg);
-  text-align: $text-align;
-  line-height: $line-height-base;
-  color: var(--#{$prefix}body-color);
+
   font-family: $font-family-base;
   font-size: $font-size-base;
   font-weight: $font-weight-base;
+  line-height: $line-height-base;
+  color: var(--#{$prefix}body-color);
+  text-align: $text-align;
+
+  background-color: var(--#{$prefix}body-bg);
 }
 
 .flex-column {
@@ -25,14 +28,15 @@ body {
   flex-shrink: 0;
 }
 
-p {
-  margin: .5rem 0 1.5rem;
-  line-height: 1.5;
-  font-family: $font-family-base;
+a {
+  color: var(--#{$prefix}link-color-base);
+  text-decoration: underline;
+}
 
-  a {
-    text-decoration: underline;
-  }
+p {
+  margin: 0.5rem 0 1.5rem;
+  font-family: $font-family-base;
+  line-height: 1.5;
 }
 
 h1,
@@ -41,9 +45,9 @@ h3,
 h4,
 h5,
 h6 {
-  text-transform: lowercase;
   font-family: $headings-font-family;
   font-weight: 900;
+  text-transform: lowercase;
 
   &::first-letter {
     text-transform: uppercase;
@@ -56,19 +60,22 @@ h3 {
   }
 }
 
-a {
-  text-decoration: underline;
-  color: var(--#{$prefix}link-color-base);
-
-  &:focus,
-  &:hover {
-    color: var(--#{$prefix}link-hover-color);
-  }
-}
-
 blockquote {
-  color: $gray-600;
-  font-style: italic;
+  margin: 1rem 3rem 2rem 1rem;
+  background-color: $gray-400;
+  border: 1px solid transparent;
+  border-radius: 0.6rem;
+
+  strong {
+    color: $blue;
+  }
+
+  p {
+    margin: 0;
+    padding: 0.5rem;
+    font-style: normal;
+    color: $gray-900;
+  }
 }
 
 .section-heading {
@@ -79,23 +86,29 @@ blockquote {
 
 .caption {
   display: block;
+
   margin: 0;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
   padding: 10px;
-  text-align: center;
-  color: var(--#{$prefix}secondary-color);
-  font-size: .8rem;
+
+  font-size: 0.8rem;
   font-style: italic;
+  color: var(--#{$prefix}secondary-color);
+  text-align: center;
+
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 pre {
   margin: 1rem 0 1.5rem;
-  border: 1px solid transparent;
-  border-radius: .6rem;
+  padding: 0.4rem 1rem 1.5rem 1.5rem;
+
+  font-size: 80%;
+  text-wrap: wrap;
+
   background-color: $black;
-  padding: 1.3rem 0;
-  font-size: $code-font-size;
+  border: 1px solid transparent;
+  border-radius: 0.6rem;
 
   code {
     color: var(--#{$prefix}code-color);
@@ -118,7 +131,6 @@ pre {
 
 *,
 *::before,
-
 *::after {
   box-sizing: border-box;
 }
@@ -135,20 +147,20 @@ pre {
     font-family: $headings-font-family;
     font-size: 1.2rem;
   }
-  @media only screen and (min-width: 992px) {
 
+  @media only screen and (min-width: 992px) {
     img {
       display: inline;
+      vertical-align: middle;
       visibility: visible;
       border-style: none;
-      vertical-align: middle;
     }
   }
 }
 
 small {
-  color: $nocc-cyan;
   font-family: $headings-font-family;
+  color: $nocc-cyan;
 
   a {
     &:focus,
@@ -197,10 +209,10 @@ small {
 
 .fixed-bottom-footer {
   position: fixed;
+  z-index: 1030;
   right: 0;
   bottom: 320px;
   left: 0;
-  z-index: 1030;
 }
 
 .post-content {
@@ -263,34 +275,37 @@ small {
 
 .thumbnail {
   display: inline-block;
-  border: 0;
-  background: none;
   width: 30%;
+  background: none;
+  border: 0;
 }
 
 .badge {
-  background: linear-gradient($nocc-badge-start, $nocc-badge-end);
-  text-transform: uppercase;
-  color: $white;
   font-family: $headings-font-family;
   font-weight: 400;
+  color: $white;
+  text-transform: uppercase;
+
+  background: linear-gradient($nocc-badge-start, $nocc-badge-end);
 }
 
-//
 // Visually hidden
 
 .visually-hidden,
 .visually-hidden-focusable {
   :not(:focus),
   :not(:focus-within) {
-    margin: -1px; // Fix for https://github.com/twbs/bootstrap/issues/25686
-    border: 0;
-    padding: 0;
+    overflow: hidden;
+
     width: 1px;
     height: 1px;
-    overflow: hidden;
+    margin: -1px; // Fix for https://github.com/twbs/bootstrap/issues/25686;Fixforhttps
+    padding: 0;
+
     white-space: nowrap;
+
     clip: rect(0, 0, 0, 0);
+    border: 0;
 
     // Fix for positioned table caption that could become anonymous cells
     &:not(caption) {
