@@ -1,74 +1,72 @@
 /* stylelint-disable media-feature-range-notation */
-// Styling for the masthead
+
+/* Styling for the masthead */
+
 section {
   &.masthead {
-    // TIP: Background images are set within the HTML using inline CSS!
     position: relative;
-    background: no-repeat center;
-    background-attachment: scroll;
-    background-color: transparent;
-    background-size: cover;
+
     width: 100%;
     height: 22vh;
 
+    background: no-repeat center;
+    background-color: transparent;
+    background-attachment: scroll;
+    background-size: cover;
+
     .overlay {
       position: absolute;
+      z-index: -20;
       top: 0;
       left: 0;
-      opacity: .5;
-      z-index: -20;
-      background-color: var(--#{$prefix}overlay-bg);
+
       width: 100%;
       height: 22vh;
-    }
 
-    @media only screen and (min-width: 990px) {
-      &.masthead {
-        height: 28vh;
-
-        .overlay {
-          height: 28vh;
-        }
-      }
+      opacity: 0.5;
+      background-color: var(--#{$prefix}overlay-bg);
     }
 
     .page-heading,
     .post-heading {
       padding: 8rem 0;
+
+      font-family: $headings-font-family;
+      color: $white;
       text-align: center;
       text-transform: lowercase;
-      color: $white;
-      font-family: $headings-font-family;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
 
       h1 {
         color: $white;
       }
-  
+
       @media only screen and (min-width: 990px) {
         color: $white;
-      }
-
-      &::first-letter {
-        text-transform: uppercase;
       }
     }
 
     .page-heading {
       h1 {
         margin-top: 0;
-        color: $white;
         font-size: 2rem;
         font-weight: 900;
+        color: $white;
       }
 
       .subheading {
         display: block;
+
         margin: 10px 0 0;
-        line-height: 1.1;
-        color: $white;
+
         font-family: $headings-font-family;
         font-size: 1.2rem;
         font-weight: 300;
+        line-height: 1.1;
+        color: $white;
 
         &::first-letter {
           text-transform: uppercase;
@@ -93,11 +91,13 @@ section {
 
       .subheading {
         display: block;
+
         margin: 10px 0 30px;
-        line-height: 1.1;
+
         font-family: $headings-font-family;
         font-size: 1.5rem;
         font-weight: 700;
+        line-height: 1.1;
       }
 
       .tags-heading,
@@ -109,12 +109,23 @@ section {
         .tags-heading,
         .meta {
           display: block;
-          text-transform: none;
-          line-height: 1.1;
+
           font-family: $headings-font-family;
           font-size: 1.2rem;
           font-weight: 300;
           font-style: italic;
+          line-height: 1.1;
+          text-transform: none;
+        }
+      }
+    }
+
+    @media only screen and (min-width: 990px) {
+      &.masthead {
+        height: 28vh;
+
+        .overlay {
+          height: 28vh;
         }
       }
     }
@@ -129,38 +140,43 @@ section {
   }
 
   &.smallhead {
+    height: 65px;
     margin-bottom: 3rem;
     background-color: var(--#{$prefix}small-head-color);
-    height: 65px;
   }
 
   &.homehead {
     .overlay {
       position: absolute;
+      z-index: 900;
       top: 0;
       left: 0;
-      opacity: .6;
-      z-index: 900;
-      background-color: var(--#{$prefix}overlay-bg);
+
       width: 100%;
       height: 35vh;
+
+      opacity: 0.6;
+      background-color: var(--#{$prefix}overlay-bg);
     }
 
     .page-heading {
       position: absolute;
       z-index: 901;
+
+      width: 100%;
       margin: auto;
       padding: 9rem 0;
-      width: 100%;
-      text-align: center;
+
       font-family: $headings-font-family;
+      text-align: center;
 
       h1 {
         margin-top: 30px;
-        text-transform: uppercase;
-        color: $white;
+
         font-size: 2rem;
         font-weight: 900;
+        color: $white;
+        text-transform: uppercase;
       }
 
       h2 {
@@ -169,10 +185,12 @@ section {
 
       .subheading {
         display: block;
+
         margin: 10px 0 0;
-        line-height: 1.1;
+
         font-size: 1rem;
         font-weight: 300;
+        line-height: 1.1;
 
         &::first-letter {
           text-transform: uppercase;
@@ -190,7 +208,7 @@ section {
           font-size: 2rem;
         }
       }
-      
+
       @media only screen and (min-width: 1536px) {
         padding: 4rem 0;
 
@@ -207,14 +225,14 @@ section {
 }
 
 section.homehead .home-description {
-  color: var(--#{$prefix}body-color);
   font-size: 1.3rem;
   font-style: normal;
+  color: var(--#{$prefix}body-color);
   text-align: center;
 }
 
 .row-heading {
-  background-color: #CCC;
+  background-color: #ccc;
 
   h2.subheading {
     color: var(--#{$prefix}body-bg);

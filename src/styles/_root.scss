@@ -1,10 +1,9 @@
-
-@use 'sass:meta';
+@use "sass:meta";
 
 $color-mode-type: data;
 
 :root {
-  &[data-bs-theme='light'] {
+  &[data-bs-theme="light"] {
     #{--#{$prefix}}body-color: #{$body-color};
     #{--#{$prefix}}body-color-rgb: #{$body-color};
     #{--#{$prefix}}body-bg: #{$body-bg};
@@ -59,12 +58,12 @@ $color-mode-type: data;
     #{--#{$prefix}}form-valid-border-color: #{$form-valid-border-color};
     #{--#{$prefix}}form-invalid-color: #{$form-invalid-color};
     #{--#{$prefix}}form-invalid-border-color: #{$form-invalid-border-color};
-    #{--#{$prefix}}font-family-sans-serif: #{meta.inspect($font-family-sans-serif)};
+    #{--#{$prefix}}font-family-sans-serif: #{meta.inspect(
+        $font-family-sans-serif
+      )};
     #{--#{$prefix}}font-family-monospace: #{meta.inspect($font-family-monospace)};
-
   }
 }
-
 
 @include color-mode(dark, true) {
   #{--#{$prefix}}body-color: #{$body-color-dark};

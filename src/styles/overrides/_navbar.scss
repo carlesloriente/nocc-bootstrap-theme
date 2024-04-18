@@ -1,75 +1,82 @@
 /* stylelint-disable media-feature-range-notation */
-// Styling for the navbar
 
-@use 'sass:color';
+/* Styling for the navbar */
+
+@use "sass:color";
 
 nav {
   position: absolute;
-  border-bottom: 1px solid transparent;
-  background-color: transparent;
   font-family: $headings-font-family;
+  background-color: transparent;
+  border-bottom: 1px solid transparent;
 
   .navbar-brand {
-    text-decoration: none;
-    text-shadow: 1px 1px $black;
-    color: $gray-200;
     font-size: medium;
     font-weight: 800;
+    color: $gray-200;
+    text-decoration: none;
+    text-shadow: 1px 1px $black;
 
     &:focus,
-      &:hover {
-        color: fade-out($gray-400, .3);
-      }
+    &:hover {
+      color: fade-out($gray-400, 0.3);
     }
+  }
 
   .navbar-toggler {
-    padding: 13px;
     cursor: pointer;
-    text-transform: uppercase;
-    color: $gray-200;
-    font-size: .75rem;
+
+    padding: 13px;
+
+    font-size: 0.75rem;
     font-weight: 800;
-    background-color: rgba($color: $gray-200, $alpha: 40%)
+    color: $gray-200;
+    text-transform: uppercase;
+
+    background-color: rgba($color: $gray-200, $alpha: 40%);
   }
 
   .nav-item {
     a {
-      text-transform: uppercase;
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: $white;
       text-decoration: $link-decoration;
       text-shadow: 1px 1px $black;
+      text-transform: uppercase;
       letter-spacing: 1px;
-      color: $white;
-      font-size: .75rem;
-      font-weight: 800;
 
       &:focus,
       &:hover {
-        color: fade-out($gray-400, .3);
+        color: fade-out($gray-400, 0.3);
       }
     }
 
-    &:last-child  {
+    &:last-child {
       margin: 12px 0 18px;
     }
   }
 
   @media only screen and (min-width: 992px) {
     transform: translate3d(0, 0, 0);
-    transition: background-color .2s;
-    border-bottom: 1px solid transparent;
-    background: transparent;
+
     backface-visibility: hidden;
+    background: transparent;
+    border-bottom: 1px solid transparent;
+
+    transition: background-color 0.2s;
 
     .navbar-brand {
       padding: 10px 20px;
+
+      font-size: large;
+      color: $white;
       text-decoration: $link-decoration;
       text-shadow: 1px 1px $black;
-      color: $white;
-      font-size: large;
 
       &:focus,
       &:hover {
-        color: fade-out($white, .3);
+        color: fade-out($white, 0.3);
       }
     }
 
@@ -77,21 +84,21 @@ nav {
       padding: 5px 10px;
 
       a {
-        text-transform: uppercase;
+        font-size: 0.75rem;
+        font-weight: 800;
+        color: $white;
         text-decoration: $link-decoration;
         text-shadow: 1px 1px $black;
+        text-transform: uppercase;
         letter-spacing: 1px;
-        color: $white;
-        font-size: .75rem;
-        font-weight: 800;
 
         &:focus,
         &:hover {
-          color: fade-out($white, .3);
+          color: fade-out($white, 0.3);
         }
       }
 
-      &:last-child  {
+      &:last-child {
         margin: 0;
       }
     }
@@ -99,9 +106,12 @@ nav {
     &.is-fixed {
       position: fixed;
       top: -67px;
-      transition: transform .2s;
-      border-bottom: 1px solid color.adjust($white, $lightness: -.05%, $alpha: 0.2);
-      background-color: fade-out($white, .1);
+
+      background-color: fade-out($white, 0.1);
+      border-bottom: 1px solid
+        color.adjust($white, $lightness: -0.05%, $alpha: 0.2);
+
+      transition: transform 0.2s;
 
       .navbar-brand {
         color: $gray-900;
@@ -120,20 +130,20 @@ nav {
 }
 
 .navbar {
-  height: auto;
-  position: fixed;
-
   --#{$prefix}navbar-hover-color: #{$navbar-light-hover-color};
-  
+
+  position: fixed;
+  height: auto;
+
   @media only screen and (min-width: 990px) {
     height: 4rem;
   }
 }
 
 .nav-kofi {
-  border: 0;
-  padding-top: 3px;
   height: 26px;
+  padding-top: 3px;
+  border: 0;
 }
 
 .nav-github {

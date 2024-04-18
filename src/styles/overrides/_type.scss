@@ -13,9 +13,9 @@ h6,
 .h5,
 .h6 {
   margin-bottom: $headings-margin-bottom;
-  line-height: $headings-line-height;
   font-family: $headings-font-family;
   font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
 }
 
 h1,
@@ -58,29 +58,29 @@ h6,
 .display-1 {
   @include font-size($display1-size);
 
-  line-height: $display-line-height;
   font-weight: $display1-weight;
+  line-height: $display-line-height;
 }
 
 .display-2 {
   @include font-size($display2-size);
 
-  line-height: $display-line-height;
   font-weight: $display2-weight;
+  line-height: $display-line-height;
 }
 
 .display-3 {
   @include font-size($display3-size);
 
-  line-height: $display-line-height;
   font-weight: $display3-weight;
+  line-height: $display-line-height;
 }
 
 .display-4 {
   @include font-size($display4-size);
 
-  line-height: $display-line-height;
   font-weight: $display4-weight;
+  line-height: $display-line-height;
 }
 
 // Horizontal rules
@@ -97,7 +97,7 @@ hr {
 small,
 .small {
   @include font-size($small-font-size);
-  
+
   font-weight: $font-weight-normal;
 }
 
@@ -143,6 +143,6 @@ small,
   color: $blockquote-small-color;
 
   &::before {
-    content: '\2014\00A0'; // em dash, nbsp
+    content: "\2014\00A0"; // em dash, nbsp
   }
 }
