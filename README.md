@@ -22,7 +22,6 @@
 It comes in two powerful options:
 
 - **🌟 Nocc Bootstrap Theme**: An NPM Package that brings the power of NOCC directly to your NodeJS project. [Get it now!](https://www.npmjs.com/package/nocc-bootstrap-theme).
-
 - **🌐 Full Site Bundle for Jekyll**: A complete static website showcasing NOCC's seamless integration. Featuring a beautifully designed homepage, dynamic tag cloud, image gallery, and more. [Explore on GitHub](https://github.com/carlesloriente/bootstrap-theme-jekyll).
 
 > **&#9432;** NOCC is a complete replacement for Bootstrap 5.3.3
