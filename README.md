@@ -19,10 +19,11 @@
 
 **Say hello to NOCC 🎉**: A Modern Bootstrap 5 Theme!
 
-It comes in two powerful options:
+It comes in three powerful options:
 
-- **🌟 Nocc Bootstrap Theme**: An NPM Package that brings the power of NOCC directly to your NodeJS project. [Get it now!](https://www.npmjs.com/package/nocc-bootstrap-theme).
-- **🌐 Full Site Bundle for Jekyll**: A complete static website showcasing NOCC's seamless integration. Featuring a beautifully designed homepage, dynamic tag cloud, image gallery, and more. [Explore on GitHub](https://github.com/carlesloriente/bootstrap-theme-jekyll).
+- **💎 [Jekyll Theme Nocc](https://rubygems.org/gems/jekyll-theme-nocc)**: A Ruby gem that brings the power of NOCC directly to your Jekyll project.
+- **🌟 [Nocc Bootstrap Theme](https://www.npmjs.com/package/nocc-bootstrap-theme)**: An NPM Package that brings the power of NOCC directly to your NodeJS project.
+- **🌐 [Full Site Bundle for Jekyll](https://github.com/carlesloriente/bootstrap-theme-jekyll)**: A complete static website showcasing NOCC's seamless integration. Featuring a beautifully designed homepage, dynamic tag cloud, image gallery, and more.
 
 > **&#9432;** NOCC is a complete replacement for Bootstrap 5.3.3
 
@@ -205,4 +206,4 @@ New contributors are always welcome! Check out [CONTRIBUTING.md](https://github.
 
 ## Copyright and License
 
-Copyright (c) 2024 Carles Loriente. Code released under the [MIT](https://github.com/carlesloriente/nocc-bootstrap-theme/blob/master/LICENSE) license.
+Copyright (c) 2025 Carles Loriente. Code released under the [MIT](https://github.com/carlesloriente/nocc-bootstrap-theme/blob/master/LICENSE) license.

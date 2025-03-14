@@ -61,7 +61,9 @@ $color-mode-type: data;
     #{--#{$prefix}}font-family-sans-serif: #{meta.inspect(
         $font-family-sans-serif
       )};
-    #{--#{$prefix}}font-family-monospace: #{meta.inspect($font-family-monospace)};
+    #{--#{$prefix}}font-family-monospace: #{meta.inspect(
+        $font-family-monospace
+      )};
   }
 }
 
