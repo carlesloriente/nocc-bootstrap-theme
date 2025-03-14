@@ -5,7 +5,7 @@
   $prev-num: null;
 
   @each $key, $num in $map {
-    @if $prev-num or unit($num) or unit($prev-num) {
+    @if $prev-num or math.unit($num) or math.unit($prev-num) {
       $prev-key: null;
       $prev-num: null;
     }
@@ -18,7 +18,7 @@
 /* Starts at zero
  Used to ensure the min-width of the lowest breakpoint starts at 0. */
 @mixin -assert-starts-at-zero($map, $map-name: "$grid-breakpoints") {
-  @if length($map) > 0 {
+  @if list.length($map) > 0 {
     $values: map.values($map);
     $first-value: list.nth($values, 1);
   }
@@ -26,7 +26,7 @@
 
 /* Colors */
 @function to-rgb($value) {
-  @return red($value), green($value), blue($value);
+  @return color.red($value), color.green($value), color.blue($value);
 }
 
 @function rgba-css-var($identifier, $target) {
@@ -104,7 +104,7 @@
   $result: ();
 
   @each $key, $value in $map {
-    @if index($values, $key) not $key {
+    @if list.index($values, $key) not $key {
       $result: map.merge(
         $result,
         (
@@ -154,11 +154,11 @@
  Requires the use of quotes around data URIs. */
 
 @function escape-svg($string) {
-  @if str-index($string, "data:image/svg+xml") {
+  @if string.index($string, "data:image/svg+xml") {
     @each $char, $encoded in $escaped-characters {
       // Do not escape the url brackets
 
-      @if str-index($string, "url(") == 1 {
+      @if string.index($string, "url(") == 1 {
         $string: url("#{str-replace(str-slice($string, 6, -3), $char, $encoded)}");
       } @else {
         $string: str-replace($string, $char, $encoded);
@@ -201,7 +201,7 @@ $_luminance-list: 0.0008 0.001 0.0011 0.0013 0.0015 0.0017 0.002 0.0022 0.0025
 
 // stylelint-enable
 
-  @function color-contrast(
+@function color-contrast(
   $background,
   $color-contrast-dark: $color-contrast-dark,
   $color-contrast-light: $color-contrast-light,
@@ -268,18 +268,22 @@ $_luminance-list: 0.0008 0.001 0.0011 0.0013 0.0015 0.0017 0.002 0.0022 0.0025
 // Return opaque color
 // opaque(#fff, rgba(0, 0, 0, .5)) => #808080
 @function opaque($background, $foreground) {
-  @return mix(rgba($foreground, 1), $background, opacity($foreground) * 100%);
+  @return color.mix(
+    rgba($foreground, 1),
+    $background,
+    opacity($foreground) * 100%
+  );
 }
 
 // scss-docs-start color-functions
 // Tint a color: mix a color with white
 @function tint-color($color, $weight) {
-  @return mix(white, $color, $weight);
+  @return color.mix(white, $color, $weight);
 }
 
 // Shade a color: mix a color with black
 @function shade-color($color, $weight) {
-  @return mix(black, $color, $weight);
+  @return color.mix(black, $color, $weight);
 }
 
 // Shade the color if the weight is positive, else tint it
@@ -392,7 +396,7 @@ $_luminance-list: 0.0008 0.001 0.0011 0.0013 0.0015 0.0017 0.002 0.0022 0.0025
     "%": 1%,
   );
 
-  @if $dividend-unit != $divisor-unit and map-has-key($unit-map, $dividend-unit)
+  @if $dividend-unit != $divisor-unit and map.has-key($unit-map, $dividend-unit)
   {
     $result: $result * map.get($unit-map, $dividend-unit);
   }
