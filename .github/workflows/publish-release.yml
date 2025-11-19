@@ -5,6 +5,8 @@ on:
       - main
     types:
       - closed
+permissions:
+  contents: write
 jobs:
   build:
     runs-on: ubuntu-24.04
