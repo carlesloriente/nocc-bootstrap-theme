@@ -6,6 +6,8 @@ on:
   pull_request:
     branches-ignore:
     - main
+permissions:
+  contents: read
 jobs:
   build:
     name: build
